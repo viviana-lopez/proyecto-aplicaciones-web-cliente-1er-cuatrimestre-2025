@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav><ul>
+            <li>
+                <button><a href="#modificar-product">ADMINISTRAR PRODUCTOS</a></button>
+            </li>
+            <li>
+                <button><a href="#insert-product">AGREGAR NUEVO PRODUCTO</a></button>
+            </li>
+        </ul></nav>
+    </header>
+    <section>
+        <div>
+            <h1>Administrar productos</h1>
+        </div>
+
+        <br>
+        <br>
+
+        <div>
+            <form action="" method="get"></form>
+        
+        </div>
+
+        <br>
+        <br>
+    </section> 
+
+    <section>   
+        <div>
+            <div>
+                <h1>Agregar nuevo producto</h1>
+            </div>
+            
+            <div>
+               <form action="" method="post">
+                    <label for="nombre-producto">Nombre del producto</label>
+                    <input type="text" name="nombre-producto" id="nombre" placeholder="escribe el nombre del producto aqui">
+                    
+                    <br><br>
+
+                    <label for="">Categoria del producto</label>
+                    <select name="categorias" id="">
+                        <optgroup label="ESCALADA">
+                            <option value="arneses">arneses</option>
+                            <option value="cascos">cascos</option>
+                            <option value="cuerdas">cuerdas y cordines</option>
+                            <option value="mosquetones">mosquetones</option>
+                            <option value="zapatillas">zapatillas de escalada</option>
+                            <option value="accesorios">accesorios escalada</option>
+                        </optgroup>
+                        <optgroup label="MONTAÑISMO">
+                            <option value="mochilas">mochilas</option>
+                            <option value="calzado">calzado montañismo</option>
+                            <option value="material">material montañismo</option>
+                            <option value="mapas">mapas</option>
+                        </optgroup>
+                        <optgroup label="CAMPAMENTO">
+                            <option value="carpas">carpas</option>
+                            <option value="bolsas">bolsas de dormir</option>
+                            <option value="aislantes">aislantes</option>
+                            <option value="calentadores">calentadores</option>
+                        </optgroup>
+                        <optgroup label="INDUMENTARIA">
+                            <option value="prendas">prendas</option>
+                            <option value="interiores">interiores termicos</option>
+                            <option value="calzado">calzado</option>
+                            <option value="accesorios-ind">accesorios</option>
+                        </optgroup>
+                    </select>
+
+                    <br><br>
+
+                    <label for="descripcion-producto">Descripcion</label>
+                    <textarea name="Descripcion" id="descripcion-producto" rows="5" cols="50"></textarea>
+
+                    <br><br>
+
+                    <label for="imagenes">Imagenes del producto</label>
+                    <input type="file" name="" id="imagenes" multiple>
+
+                    <br> <br>
+
+                    <label for="precio">Precio</label>
+                    <input type="number" id="precio" step="100" value="0">
+
+                    <br><br>
+
+                    <label for="precio-oferta" >Precio Oferta</label>
+                    <input type="number" id="precio-oferta" step="100" value="0">
+
+                    <br><br>
+
+                    <label for="stock">Stock</label>
+                    <input type="number" id="stock" value="0">
+
+                    <br><br>
+
+                    <fieldset>
+                        <legend>Atributos</legend>
+                        <fieldset>
+                            <legend>Talle</legend>
+                            <input type="radio" id="small" value="small">
+                            <label for="small">small</label>
+                            <br>
+                            <input type="radio" id="medium" value="medium">
+                            <label for="medium">medium</label>
+                            <br>
+                            <input type="radio" name="" id="large" value="large">
+                            <label for="large">large</label>
+                        </fieldset>
+                        <br><br>    
+                        <fieldset>
+                            <legend>Color</legend>
+                            <input type="checkbox" name="" id="amarillo">
+                            <label for="amarillo">amarillo</label>
+                            <br>
+                            <input type="checkbox" name="" id="azul">
+                            <label for="azul">azul</label>
+                            <br>
+                            <input type="checkbox" name="" id="rojo">
+                            <label for="rojo">rojo</label>
+                            <br>
+                            <input type="checkbox" name="" id="naranja">
+                            <label for="naranja">naranja</label>
+                        </fieldset> 
+                    </fieldset>
+
+                    <br><br>
+
+                    <input type="submit" value="Agregar producto">
+
+                </form>
+            </div>
+            
+        </div>
+        
+
+    </section>
+    
+</body>
+</html>
