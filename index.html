@@ -19,7 +19,7 @@
                 <ul class="nav-list">
                     <li><a href="#">INICIO</a></li>
                     <li><a href="#">ESCALADA</a>
-                        <ul>
+                        <ul class="nav-list-sublist">
                             <li><a href="#">ARNESES</a></li>
                             <li><a href="#">CASCOS</a></li>
                             <li><a href="#">CUERDAS Y CORDINES</a></li>
@@ -29,7 +29,7 @@
                         </ul>
                     </li>
                     <li><a href="#">MONTAÑISMO</a>
-                        <ul>
+                        <ul class="nav-list-sublist">
                             <li><a href="#">MOCHILAS</a></li>
                             <li><a href="#">CALZADO</a></li>
                             <li><a href="#">MATERIAL</a></li>
@@ -37,7 +37,7 @@
                         </ul>
                     </li>
                     <li><a href="#">CAMPAMENTO</a>
-                        <ul>
+                        <ul class="nav-list-sublist">
                             <li><a href="#">CARPAS</a></li>
                             <li><a href="#">BOLSAS DE DORMIR</a></li>
                             <li><a href="#">AISLANTES</a></li>
@@ -45,7 +45,7 @@
                         </ul>
                     </li>
                     <li><a href="#">INDUMENTARIA</a>
-                        <ul>
+                        <ul class="nav-list-sublist">
                             <li><a href="#">PRENDAS</a></li>
                             <li><a href="#">INTERIORES</a></li>
                             <li><a href="#">CALZADO</a></li>
@@ -55,7 +55,7 @@
                 </ul>
             </nav>
 
-            <div>
+            <div class="serchbar">
                 <form action="" method="get">
                     <label for=""></label>
                     <input type="text" placeholder="Buscador">
@@ -71,9 +71,54 @@
 
    <aside><!--PARA PONER LOS FILTROS DE BUSQUEDA--></aside>
 
-   <section class="banner"></section>
+   <section class="banner-tipo-producto">
+    <div><div class="banner-tipo-producto-contenedor">
+        <div class="banner-tipo-producto-alta"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-escalada.jpg" alt="escalada"></a></div>
+        <div class="banner-tipo-producto-chica">
+            <div class="banner-tipo-producto-chica-img"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-montania.jpg" alt="montanismo"></a></div>
+            <div class="banner-tipo-producto-chica-img"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-campamento.png" alt="campamento"></a></div>
+        </div>
+    </div>
+   </div>
+    <div class="banner-tipo-producto-ancha"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-indumentaria.png" alt="indumentaria"></a></div>
+  
+   </section>
 
-   <section class="destacados"></section>
+   <section class="productos-destacados">
+    <div class="prod-destacados-container">
+        <div class="prod-destacados-titulo"><h2><p>PRODUCTOS DESTACADOS</p></h2></div>
+        <div class="prod-destacados-container-productos">
+            <div class="contenedor-producto">
+                <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/campera.webp" alt="">
+                <p class="producto-nombre">Campera Ansilta Primaloft</p>
+                <p class="producto-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus corporis voluptate error nobis perspiciatis explicabo ullam nam, et eius tempore rerum repudiandae est nesciunt! In quos error id facere quo?</p>
+                <p class="producto-precio">$ 352000</p>
+                <b class="producto-boton-comprar"><a href="#">COMPRAR</a></b>
+            </div>
+            <div class="contenedor-producto">
+                <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/pedula-amarilla.jpg" alt="">
+                <p class="producto-nombre">La Sportiva Solution</p>
+                <p class="producto-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo veniam optio molestiae animi. Quidem veritatis rem, quia laborum voluptate vel. Quis fuga consequatur blanditiis recusandae iusto, alias tempora atque a?</p>
+                <p class="producto-precio">$ 311000</p>
+                <b class="producto-boton-comprar"><a href="#">COMPRAR</a></b>
+            </div>
+            <div class="contenedor-producto">
+                <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/mochila-azul.webp" alt="">
+                <p class="producto-nombre">Lowe Alpine Yacuri 65lt</p>
+                <p class="producto-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dolorem officiis mollitia culpa voluptatum aut! Modi aliquid quod ratione architecto. Vitae inventore error tempora obcaecati expedita, est culpa rerum ipsa?</p>
+                <p class="producto-precio">$ 619000</p>
+                <b class="producto-boton-comprar"><a href="#">COMPRAR</a></b>
+            </div>
+            <div class="contenedor-producto">
+                <img  class="producto-imagen" src="./carpetaImagenes/imagenes-productos/carpa-blanca.jpg" alt="">
+                <p class="producto-nombre">Naturhike Cloud 2 personas</p>
+                <p class="producto-descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat doloremque eveniet quidem odio labore fugit placeat explicabo maxime, architecto porro rem dolores consequatur perspiciatis possimus eos reiciendis qui velit suscipit!</p>
+                <p class="producto-precio">$ 469000</p>
+                <b class="producto-boton-comprar"><a href="#">COMPRAR</a></b>
+            </div>
+        </div>
+    </div>
+   </section>
 
    <section class="product">
     <div class="product-header">

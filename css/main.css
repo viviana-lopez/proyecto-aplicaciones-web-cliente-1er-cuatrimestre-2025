@@ -32,3 +32,36 @@ header{
 .abrir-menu {
     display: none;
 }
+
+    
+    
+.banner-tipo-producto-contenedor{
+    display: flex;
+
+   img {
+            margin: 5%;
+        }
+    /*.banner-tipo-producto-alta{}*/
+    .banner-tipo-producto-chica{
+        .banner-tipo-producto-chica-img img{
+            width: 50rem;
+            margin-left: 10%;
+        }
+        
+    }
+}
+
+.banner-tipo-producto-ancha img {
+    width: 100rem;
+}
+
+.prod-destacados-container-productos{
+    display: flex;
+}
+
+.contenedor-producto {
+    padding: 2%;
+    img{
+        width: 16rem;
+    }
+}
