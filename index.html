@@ -6,6 +6,12 @@
     <!-- "viewport" => indica que ajusta lo que va a ver la pantalla al ancho del dispositivo
          "initial-scale=1.0" => la escala 1:1-->
     <title>PROYECTO VIVIANA LOPEZ: Catálogo de productos</title><!---->
+
+    <!--para incluir la tipografia roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/main.css"> <!-- vinculacion a la hoja de estilo main.css-->
 </head>
 <body><!-- Aquí va el contenido de la web-->
@@ -72,13 +78,14 @@
    <aside><!--PARA PONER LOS FILTROS DE BUSQUEDA--></aside>
 
    <section class="banner-tipo-producto">
-    <div><div class="banner-tipo-producto-contenedor">
-        <div class="banner-tipo-producto-alta"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-escalada.jpg" alt="escalada"></a></div>
-        <div class="banner-tipo-producto-chica">
-            <div class="banner-tipo-producto-chica-img"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-montania.jpg" alt="montanismo"></a></div>
-            <div class="banner-tipo-producto-chica-img"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-campamento.png" alt="campamento"></a></div>
+    <div>
+        <div class="banner-tipo-producto-contenedor">
+            <div class="banner-tipo-producto-alta"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-escalada.jpg" alt="escalada"></a></div>
+            <div class="banner-tipo-producto-chica">
+                <div class="banner-tipo-producto-chica-img"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-montania.jpg" alt="montanismo"></a></div>
+                <div class="banner-tipo-producto-chica-img"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-campamento.png" alt="campamento"></a></div>
+            </div>
         </div>
-    </div>
    </div>
     <div class="banner-tipo-producto-ancha"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-indumentaria.png" alt="indumentaria"></a></div>
   
@@ -125,49 +132,18 @@
         <h1>PRODUCTOS</h1>
     </div>  
     <div class="product-grid">
-        <article class="product">
-            <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
-            <h3 class="product-name">Nombre del producto</h3>
-            <p class="product-descripcion">Descripcion</p>
-            <p class="product-price">$ 00000</p>
-            <button class="product-button">Comprar</button>
-        </article>
-        <article class="product">
-            <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
-            <h3 class="product-name">Nombre del producto</h3>
-            <p class="product-descripcion">Descripcion</p>
-            <p class="product-price">$ 00000</p>
-            <button class="product-button">Comprar</button>
-        </article>
-        <article class="product">
-            <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
-            <h3 class="product-name">Nombre del producto</h3>
-            <p class="product-descripcion">Descripcion</p>
-            <p class="product-price">$ 00000</p>
-            <button class="product-button">Comprar</button>
-        </article>
-        <article class="product">
-            <img class="product-img" src="./carpetaImagenes/Picture5.jpg" alt="">
-            <h3 class="product-name">Nombre del producto</h3>
-            <p class="product-descripcion">Descripcion</p>
-            <p class="product-price">$ 00000</p>
-            <button class="product-button">Comprar</button>
-        </article>
-        <article class="product">
-            <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
-            <h3 class="product-name">Nombre del producto</h3>
-            <p class="product-descripcion">Descripcion</p>
-            <p class="product-price">$ 00000</p>
-            <button class="product-button">Comprar</button>
-        </article>
-        <article class="product">
-            <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
-            <h3 class="product-name">Nombre del producto</h3>
-            <p class="product-descripcion">Descripcion</p>
-            <p class="product-price">$ 00000</p>
-            <button class="product-button">Comprar</button>
-        </article>
 
+        <!-- aqui se van a cargar dinamicamente los productos -->
+
+        <!--
+        <article class="product">
+            <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
+            <h3 class="product-name">Nombre del producto</h3>
+            <p class="product-descripcion">Descripcion</p>
+            <p class="product-price">$ 00000</p>
+            <button class="product-button">Comprar</button>
+        </article>
+        -->
     </div>  
     
 
@@ -191,6 +167,7 @@
 
    <footer></footer>
 
-   <script src="./js/main.js"></script>
+   
 </body>
+<script src="./js/main.js"></script>
 </html>
