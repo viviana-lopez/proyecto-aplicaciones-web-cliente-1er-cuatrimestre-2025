@@ -1,12 +1,13 @@
-/* reseteo de la configuracion inicial por defecto*/
+/* ===========RESETEO DE LA CONFIGURACION INICIAL POR DEFECTO=========*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;  
     list-style-type: none; /* para quitarle las viñetas a los items de la lista*/  
-    
 }
+/*---------------------------------------------------------------------------*/
 
+/*==============MODIFICACION DE TIPO DE TIPOGRAFIA PARA TODO EL INDEX==================*/
 * {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -15,36 +16,58 @@
     font-variation-settings:
       "width" 100;
   }
+/*---------------------------------------------------------------------------------------*/
 
+/*====================================================================*/
+/*==========================CABECERA==========================*/
 header{
     display: flex;
     align-items: center; /*para que queden centrados verticalmente*/
     justify-content: space-between;/*para que deje el espacio bacion entre los elementos en medio de ellos*/
-    padding: 2%;
+    padding: 0.5% 2%;
     background-color:#f8f9f9 ;
 }
 
 .logo {
-    max-width: 20%;
+    max-width: 15%;
 }
 
+/*========================NAVBAR=========================================*/
 .nav-list {
-    
     display: flex;/*para que los items se pongan en fila uno al lado del otro*/
     gap: 1rem;/*para darle separacion entre si a los items de la lista*/
 }
 
 .nav-list li a {
+    display: block;/*para que los elementos de la lista no se superpongan entre si*/
     text-decoration: none;/*para quitarle el subrayado del link*/
     color: black;
+    padding: 0.5rem;
+    background-color: white;
 }
 
+.nav-list li a:hover {
+    color: green;
+}
+
+
+
+/*SUBMENU*/
+.nav-list-sublist{
+    display: none;/*para ocultar el sub-menu*/
+    position: absolute;/*para que al abrir el submenu no deforme las medidas del menu*/
+}
+
+.nav-list li:hover > ul {
+    display: block;/*para que muestre el sector de submenu que corresponde al item del menu por el cual se hace el hover*/
+}
+/*-------------------------------------------------------------------*/
 .abrir-menu {
     display: none;
 }
 
     
-    
+/*=============CONTENEDOR DE PRODUCTOS===============*/    
 .banner-tipo-producto-contenedor{
     display: flex;
     flex-wrap: wrap;
