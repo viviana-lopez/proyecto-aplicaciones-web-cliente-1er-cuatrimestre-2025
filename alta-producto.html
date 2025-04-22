@@ -4,44 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrar productos</title>
+
+    <link rel="stylesheet" href="./css/alta-producto.css"> <!-- vinculacion a la hoja de estilo main.css-->
 </head>
 <body>
     <header>
-        <nav><ul>
-            <li>
-                <button><a href="#modificar-product">ADMINISTRAR PRODUCTOS</a></button>
-            </li>
-            <li>
-                <button><a href="#insert-product">AGREGAR NUEVO PRODUCTO</a></button>
-            </li>
-        </ul></nav>
+        <nav>
+            <ul>
+                <li>
+                    <button><a href="#modificar-product">ADMINISTRAR PRODUCTOS</a></button>
+                </li>
+                <li>
+                    <button><a href="#insert-product">AGREGAR NUEVO PRODUCTO</a></button>
+                </li>
+            </ul>
+        </nav>
     </header>
     <section>
-        <div>
+        <div> 
             <h1>Administrar productos</h1>
         </div>
 
         <br>
         <br>
 
-        <div>
-            <form action="" method="get"></form>
-        
-        </div>
+        <div class="aside-container">
+<aside>
 
-        <br>
-        <br>
-    </section> 
-
-    <section>   
-        <div>
             <div>
-                <h1>Agregar nuevo producto</h1>
+                <h4>Busqueda de productos</h4>
             </div>
-            
-            <div>
-               <form action="" method="post">
-                    <label for="nombre-producto">Nombre del producto</label>
+
+            <br>
+            <br>
+
+            <label for="nombre-producto">Nombre del producto:</label>
                     <input type="text" name="nombre-producto" id="nombre" placeholder="escribe el nombre del producto aqui">
                     
                     <br><br>
@@ -73,69 +70,158 @@
                             <option value="interiores">interiores termicos</option>
                             <option value="calzado">calzado</option>
                             <option value="accesorios-ind">accesorios</option>
-                        </optgroup>
+                        </optgroup>                    
                     </select>
+                    <br><br>
+        </aside>
+        </div>
+        
+
+        <div>
+            <form action="" method="get"></form>
+        
+        </div>
+
+        <br>
+        <br>
+    </section> 
+
+    <section>   
+        <div>
+            <div>
+                <h1>Agregar nuevo producto</h1>
+            </div>
+            
+            <div>
+               <form action="" method="post">
+                
+                <div class="input-container">
 
                     <br><br>
 
-                    <label for="descripcion-producto">Descripcion</label>
-                    <textarea name="Descripcion" id="descripcion-producto" rows="5" cols="50"></textarea>
+                    <div>
+                        <label for="nombre-producto">Nombre del producto:</label>
+                        <input type="text" name="nombre-producto" id="nombre" placeholder=" Escribe el nombre del producto aqui" size="70">                         
+                    </div>
+                    
+                    <br><br>
+
+                    <div>
+                        <label for="">Categoria del producto</label>
+                        <select name="categorias" id="">
+                            <optgroup label="ESCALADA">
+                                <option value="arneses">arneses</option>
+                                <option value="cascos">cascos</option>
+                                <option value="cuerdas">cuerdas y cordines</option>
+                                <option value="mosquetones">mosquetones</option>
+                                <option value="zapatillas">zapatillas de escalada</option>
+                                <option value="accesorios">accesorios escalada</option>
+                            </optgroup>
+                            <optgroup label="MONTAÑISMO">
+                                <option value="mochilas">mochilas</option>
+                                <option value="calzado">calzado montañismo</option>
+                                <option value="material">material montañismo</option>
+                                <option value="mapas">mapas</option>
+                            </optgroup>
+                            <optgroup label="CAMPAMENTO">
+                                <option value="carpas">carpas</option>
+                                <option value="bolsas">bolsas de dormir</option>
+                                <option value="aislantes">aislantes</option>
+                                <option value="calentadores">calentadores</option>
+                            </optgroup>
+                            <optgroup label="INDUMENTARIA">
+                                <option value="prendas">prendas</option>
+                                <option value="interiores">interiores termicos</option>
+                                <option value="calzado">calzado</option>
+                                <option value="accesorios-ind">accesorios</option>
+                            </optgroup>
+                        </select>
+                    </div>
 
                     <br><br>
 
-                    <label for="imagenes">Imagenes del producto</label>
-                    <input type="file" name="" id="imagenes" multiple>
+                    <div class="form-product-description">
+                        <label for="descripcion-producto">Descripcion</label>
+                    <textarea name="Descripcion" id="descripcion-producto" rows="5" cols="50" placeholder=" Escribe las características principales que definen al producto"></textarea>
+                    </div>
+
+                    <br><br>
+
+                    <div>
+                        <label for="imagenes">Imagenes del producto: </label>
+                        <input type="file" name="" id="imagenes" multiple>
+                    </div>
 
                     <br> <br>
 
-                    <label for="precio">Precio</label>
-                    <input type="number" id="precio" step="100" value="0">
+                    <div>
+                        <label for="precio">Precio:</label>
+                        <!-- AQUI ES DONDE NO PUEDO AJUSTAR EL ANCHO DEL INPUT-->
+                        <input type="number" id="precio" step="100" value="0">
+                    </div>
 
                     <br><br>
 
-                    <label for="precio-oferta" >Precio Oferta</label>
+                    <div>
+                        <label for="precio-oferta" >Precio Oferta:</label>
                     <input type="number" id="precio-oferta" step="100" value="0">
-
+                    </div>
+                    
                     <br><br>
 
-                    <label for="stock">Stock</label>
+                    <div>
+                        <label for="stock">Stock:</label>
                     <input type="number" id="stock" value="0">
+                    </div>
 
                     <br><br>
+
+                </div>
+                    
 
                     <fieldset>
                         <legend>Atributos</legend>
                         <fieldset>
                             <legend>Talle</legend>
-                            <input type="radio" id="small" value="small">
-                            <label for="small">small</label>
-                            <br>
-                            <input type="radio" id="medium" value="medium">
-                            <label for="medium">medium</label>
-                            <br>
-                            <input type="radio" name="" id="large" value="large">
-                            <label for="large">large</label>
+                            <div class="checkbox-container">
+                                <input type="radio" id="small" value="small" class="option-input">
+                                <label for="small" class="option-label">small</label>
+                                <br><br>
+                                <input type="radio" id="medium" value="medium" class="option-input">
+                                <label for="medium"class="option-label" >medium</label>
+                                <br><br>
+                                <input type="radio" name="" id="large" value="large"class="option-input" >
+                                <label for="large" class="option-label">large</label>  
+                            </div>
+                            
                         </fieldset>
-                        <br><br>    
+                          
                         <fieldset>
                             <legend>Color</legend>
-                            <input type="checkbox" name="" id="amarillo">
-                            <label for="amarillo">amarillo</label>
-                            <br>
-                            <input type="checkbox" name="" id="azul">
-                            <label for="azul">azul</label>
-                            <br>
-                            <input type="checkbox" name="" id="rojo">
-                            <label for="rojo">rojo</label>
-                            <br>
-                            <input type="checkbox" name="" id="naranja">
-                            <label for="naranja">naranja</label>
+                            <div class="checkbox-container">
+                                <input type="checkbox" name="" id="amarillo" class="option-input">
+                                <label for="amarillo" class="option-label">amarillo</label>
+                                <br><br>
+                                <input type="checkbox" name="" id="azul" class="option-input">
+                                <label for="azul" class="option-label">azul</label>
+                                <br><br>
+                                <input type="checkbox" name="" id="rojo" class="option-input">
+                                <label for="rojo" class="option-label">rojo</label>
+                                <br><br>
+                                <input type="checkbox" name="" id="naranja" class="option-input">
+                                <label for="naranja" class="option-label">naranja</label>      
+                            </div>
+                            
                         </fieldset> 
+                        <br><br>
                     </fieldset>
 
                     <br><br>
 
-                    <input type="submit" value="Agregar producto">
+                    <div>
+                        <input class="button" type="submit" value="Agregar producto">
+                    </div>
+                    
 
                 </form>
             </div>

@@ -1,0 +1,110 @@
+
+/* reseteo de la configuracion inicial por defecto*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    list-style-type: none; /* para quitarle las viñetas a los items de la lista*/     
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "width" 100;
+  }
+
+.aside-container{
+display: flex;
+align-items: stretch;
+flex-wrap: wrap;
+}
+
+aside{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(228, 228, 228);
+    width: 30%;
+    padding: 1rem;
+
+    h4{
+        text-align: center;
+    }
+}
+
+section{
+    background-color: rgb(220, 220, 220);
+    margin: 3rem;
+    padding: 3rem;
+}
+
+nav {   
+    ul {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row-reverse;
+
+        li {
+            margin: 1rem; /*para darle un margen a los botones y que no toquen los limites de la pantalla ni entre si*/
+            button {
+                border-style: none;/* para quitarle los bordes predeterminados del boton*/
+                display: flex;/*activo el flexbox*/
+                align-items: flex-end;/*para posicionar los elementos a la derecha de la pantalla*/
+                background-color: black;/*color del fondo*/
+                border-radius: 8px;/*borde redondeado para el botón*/
+                
+                a {
+                    text-decoration: none;/* para borrarle el subrayado al texto del boton*/
+                    color: whitesmoke;/*color del texto*/
+                    padding: 1rem;/*para ampliar el espacio alrededor del texto*/
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    background-color: rgb(112, 112, 112);
+    color: white;
+    padding: 1rem;
+}
+
+.input-container{
+    padding-left: 1rem;
+}
+
+.form-product-description{
+    display: flex;
+    flex-direction: column;
+}
+
+legend{
+    padding-left: 1rem;
+}
+
+fieldset{
+    margin: 2rem 2rem 0rem 1rem;
+    padding-left: 1rem;
+  
+    .checkbox-container{
+        padding: 1rem;    
+    }
+    
+}
+
+/*EL BOTON DE SUBMIT: NO LO PUEDO POSICIONAR A LA DERECHA*/
+.button{  
+    border-style: none;/* para quitarle los bordes predeterminados del boton*/
+    background-color: black;/*color del fondo*/
+    border-radius: 8px;/*borde redondeado para el botón*/
+    text-decoration: none;/* para borrarle el subrayado al texto del boton*/
+    color: whitesmoke;/*color del texto*/
+    padding: 1rem;/*para ampliar el espacio alrededor del texto*/
+}
+
+.button-submit{
+    display: flex;/*activo el flexbox*/
+    justify-content: flex-end;
+}

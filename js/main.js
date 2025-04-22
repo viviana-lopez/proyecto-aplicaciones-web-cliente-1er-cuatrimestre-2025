@@ -103,3 +103,6 @@ products.forEach(product => {
 //    grid.appendChild(product);
 //}
 
+
+// ****  MANEJO DE EVENTOS  ****
+
