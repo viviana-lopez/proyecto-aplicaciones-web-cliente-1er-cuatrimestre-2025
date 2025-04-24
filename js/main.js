@@ -1,30 +1,40 @@
 //*****************definicion de la variable producto*******************
 const products =[
     {
+        tipo: "indumentaria",
+        subTipo: "prendas",
         name: "Campera Ansilta Primaloft",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         image: "./carpetaImagenes/imagenes-productos/campera.webp",
         price:"352000",
     },
-    {
+    {   
+        tipo: "escalada",
+        subTipo: "zapatillas",
         name: "La Sportiva Solution",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         image: "./carpetaImagenes/imagenes-productos/pedula-amarilla.jpg",
         price:"311000",
     },
     {
+        tipo: "montañismo",
+        subTipo: "mochilas",
         name: "Lowe Alpine Yacuri 65lt",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         image: "./carpetaImagenes/imagenes-productos/mochila-azul.webp",
         price:"619000",
     },
     {
+        tipo: "campamento",
+        subTipo: "carpas",
         name: "Naturhike Cloud 2 personas",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         image: "./carpetaImagenes/imagenes-productos/carpa-blanca.jpg",
         price:"469000",
     },
     {
+        tipo: "indumentaria",
+        subTipo: "prendas",
         name: "Campera Aconcagua 4",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
         image: "./carpetaImagenes/Picture5.jpg",

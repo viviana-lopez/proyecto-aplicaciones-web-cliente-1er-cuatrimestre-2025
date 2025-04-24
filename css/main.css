@@ -121,14 +121,14 @@ header{
  }
     
 /*=============CONTENEDOR DE PRODUCTOS===============*/    
-.banner-tipo-producto-contenedor{
+/*.banner-tipo-producto-contenedor{
     display: flex;
     flex-wrap: wrap;
 
    img {
             margin: 5%;
         }
-    .banner-tipo-producto-alta{
+    .banner-tipo-producto-grande{
         background-image: url("/carpetaImagenes/banner-tipo-productos/banner-productos-escalada.jpg");
         width: 50%;
         background-repeat: no-repeat;
@@ -136,18 +136,204 @@ header{
     }
 
 
-    .banner-tipo-producto-chica{
+    .banner-tipo-producto-chico{
         width: 45%;
         align-content: space-between;
-        .banner-tipo-producto-chica-img img{
+        .banner-tipo-producto-chico-img img{
             width: 100%;
             margin-left: 10%;
             
         }
     }
+}*/
+
+/*contenedor productos usando BACKGROUND-IMG*/
+
+.banner-tipo-producto{
+    .banner-tipo-producto-contenedor{
+        display: flex;
+        .banner-tipo-producto-grande{
+            width: 50%;
+            margin: 2rem;
+            background-image: url("/carpetaImagenes/banner-tipo-productos/productos-escalada.jpg");
+            min-width: 400px;
+            min-height: 100rem;
+
+            background-position: center; /*para que la imagen quede centrada dentro del contenedor*/
+            background-repeat: no-repeat;/*para que la imagen no se repita*/
+            background-size: cover;/*para que la imagen crezca al tamaño que necesita para cubrir el contenedor*/
+            position: relative;
+
+            a{
+                
+                text-decoration: none;
+                color: rgb(223, 32, 32);
+                
+                h4 {
+                    font-size: 4rem;
+                    text-shadow: 2px;
+                }
+                p{
+                    font-size: 3rem;
+                    text-shadow: 2px;
+                }
+            }
+        }   
+        div{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            
+            
+            .banner-tipo-producto-chico{
+                width: 100%;
+                margin: 2rem;
+                display: flex;
+                flex-direction: row;
+
+                .banner-tipo-producto-chico-img1{
+                    width: 100%;
+                    margin-right: 1rem;
+                    background-image: url("/carpetaImagenes/banner-tipo-productos/productos-campamento1.png");
+                    min-width: 400px;
+                    min-height: 50rem;
+
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+
+                    a{}
+                }
+                .banner-tipo-producto-chico-img2{
+                    width: 100%;
+                    margin-left: 1rem;
+                    background-image: url("/carpetaImagenes/banner-tipo-productos/productos-montanismo.jpg");
+                    min-width: 400px;
+                    min-height: 50rem;
+
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+
+                    a{}
+                }
+            }                   
+            .banner-tipo-producto-mediano{
+                width: 100%;
+                margin: 2.5rem;
+                background-image: url("/carpetaImagenes/banner-tipo-productos/banner-productos-indumentaria.png");
+                min-width: 400px;
+                min-height: 50rem;
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+
+                a{}
+            }
+        }
+    }
+}
+/*  */
+
+/*contenedor productos utilizando IMG*/
+
+.banner-tipo-producto2{
+    
+    .banner-tipo-producto-contenedor2{
+        display: flex;
+        
+        .banner-tipo-producto-grande2{
+            width: 100%;
+            margin: 2rem;
+            
+
+            
+
+            a{
+                position: relative;/*para indicar en relacion a que se va a relacionar la posicion absoluta*/ 
+                img{
+                    width: 100%;
+                     
+                }
+                text-decoration: none;
+                color: rgb(134, 9, 9);
+                
+                h4 {
+                    position: absolute;
+                    border: 1px solid red;
+                    bottom: 40%;
+                    left: 10%;
+                    font-size: 5rem;
+                    font-weight: bold;
+                    text-shadow: 2px;
+                }
+                p{
+                    position: absolute;
+                    border: 1px solid red;
+                    bottom: 30%;
+                    left: 10%;
+                    font-size: 3rem;
+                    text-shadow: 2px;
+                }    
+                
+                
+            }
+        }   
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            
+            .banner-tipo-producto-chico2{
+                width: 100%;
+                margin: 2rem;
+                display: flex;
+                flex-direction: row;
+
+                .banner-tipo-producto-chico-img1{
+                    width: 100%;
+                    margin-right: 1rem;
+                    
+
+
+                    a{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .banner-tipo-producto-chico-img2{
+                    width: 100%;
+                    margin-left: 1rem;
+                    
+                    a{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }                   
+            .banner-tipo-producto-mediano2{
+                width: 100%;
+                margin: 2.5rem;
+                
+
+                a{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.banner-tipo-producto-ancha img {
+.banner-tipo-producto-mediano img {
     width: 100%;
 }
 
