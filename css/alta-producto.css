@@ -22,6 +22,8 @@ align-items: stretch;
 flex-wrap: wrap;
 }
 
+
+
 aside{
     display: flex;
     flex-flow: column wrap;
@@ -30,8 +32,14 @@ aside{
     padding: 1rem;
 
     h4{
+     
         text-align: center;
+        
     }
+}
+
+.titulo-h4{
+    font-size: 2rem;
 }
 
 section{
@@ -84,14 +92,31 @@ legend{
     padding-left: 1rem;
 }
 
-fieldset{
-    margin: 2rem 2rem 0rem 1rem;
-    padding-left: 1rem;
-  
-    .checkbox-container{
-        padding: 1rem;    
+
+
+.fieldset2-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 1rem;
+
+    fieldset{
+        margin: 1rem;
     }
+}
+
+.checkbox-container2{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
     
+    div{
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+button:hover{
+    background-color: blue;
 }
 
 /*EL BOTON DE SUBMIT: NO LO PUEDO POSICIONAR A LA DERECHA*/
@@ -108,4 +133,8 @@ fieldset{
     display: flex;
     align-items: flex-end;
     flex-direction: row-reverse;
+}
+
+.button:hover{
+    background-color: blue;
 }
