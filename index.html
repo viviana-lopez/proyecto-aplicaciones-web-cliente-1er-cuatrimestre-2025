@@ -12,7 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/main.css"> <!-- vinculacion a la hoja de estilo main.css-->
+    <!-- vinculacion a la hoja de estilo main.css-->
+    <link rel="stylesheet" href="./css/main.css"> 
+
+    <!--iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body><!-- Aquí va el contenido de la web-->
    <header>
@@ -63,8 +68,8 @@
 
             <!--BUSCADOR DE PRODUCTOS-->
             <div class="serchbar">
-                <div>
-                    <input type="text" placeholder="Buscar producto">
+                <div><i class="bi bi-search"></i>
+                    <input type="text" placeholder="Buscar producto"> <i class="bi bi-search"></i>
                 </div>
                 <div>
                     <img class="img-serch" src="./carpetaImagenes/lupaNegra.png" alt="lupa del buscador de productos">
@@ -78,8 +83,47 @@
             
    </header> 
 
-   <aside><!--PARA PONER LOS FILTROS DE BUSQUEDA--></aside>
+   
 
+   <section class="landing">
+    <img src="./carpetaImagenes/idea-landing-promociones.webp" alt="">
+   </section>
+
+    <section class="productos-destacados">
+        <div class="prod-destacados-container">
+            <div class="prod-destacados-titulo"><h1>PRODUCTOS DESTACADOS</h1></div>
+            <div class="prod-destacados-container-productos">
+             <div class="contenedor-producto">
+                    <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/campera.webp" alt="">
+                    <p class="producto-nombre">Campera Ansilta Primaloft</p>
+                    <p class="producto-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus corporis voluptate error nobis perspiciatis explicabo ullam nam, et eius tempore rerum repudiandae est nesciunt! In quos error id facere quo?</p>
+                    <p class="producto-precio">$ 352000</p>
+                    <b class="producto-boton-comprar" id="btn-add-product"><a href="#">COMPRAR</a></b>
+                </div>
+                <div class="contenedor-producto">
+                    <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/pedula-amarilla.jpg" alt="">
+                    <p class="producto-nombre">La Sportiva Solution</p>
+                    <p class="producto-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo veniam optio molestiae animi. Quidem veritatis rem, quia laborum voluptate vel. Quis fuga consequatur blanditiis recusandae iusto, alias tempora atque a?</p>
+                    <p class="producto-precio">$ 311000</p>
+                    <b class="producto-boton-comprar" id="btn-add-product"><a href="#">COMPRAR</a></b>
+                </div>
+                <div class="contenedor-producto">
+                    <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/mochila-azul.webp" alt="">
+                    <p class="producto-nombre">Lowe Alpine Yacuri 65lt</p>
+                    <p class="producto-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dolorem officiis mollitia culpa voluptatum aut! Modi aliquid quod ratione architecto. Vitae inventore error tempora obcaecati expedita, est culpa rerum ipsa?</p>
+                    <p class="producto-precio">$ 619000</p>
+                    <b class="producto-boton-comprar" id="btn-add-product" ><a href="#">COMPRAR</a></b>
+                </div>
+                <div class="contenedor-producto">
+                    <img  class="producto-imagen" src="./carpetaImagenes/imagenes-productos/carpa-blanca.jpg" alt="">
+                    <p class="producto-nombre">Naturhike Cloud 2 personas</p>
+                    <p class="producto-descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat doloremque eveniet quidem odio labore fugit placeat explicabo maxime, architecto porro rem dolores consequatur perspiciatis possimus eos reiciendis qui velit suscipit!</p>
+                    <p class="producto-precio">$ 469000</p>
+                    <b class="producto-boton-comprar" id="btn-add-product" ><a href="#">COMPRAR</a></b>
+                </div>
+            </div>
+        </div> 
+    </section>
 
 
     <section class="banner-tipo-producto2">
@@ -88,78 +132,101 @@
             <div class="banner-tipo-producto-grande2" alt="escalada"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/productos-escalada.jpg" alt=""><h4>Equipamiento para escalada</h4><p>Todo para una salida perfecta y segura</p></a></div>
             <div>
                 <div class="banner-tipo-producto-chico2">
-                    <div class="banner-tipo-producto-chico-img1"><a href="#">
-                        <img src="./carpetaImagenes/banner-tipo-productos/productos-campamento1.png" alt="montanismo">
-                      
-                                <h4>Todo para el momento de acampar</h4>
-                         <p>Dormir, cocinar y pasar el rato</p >
-                       
-                       </a></div>
-                    <div class="banner-tipo-producto-chico-img2"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/productos-montanismo.jpg" alt="campamento"> <h4>Equipo para montañismo</h4><p>equipate para tu proxima cumbre</p></a></div>
+                    <div class="banner-tipo-producto-chico-img1">
+                        <a href="#">
+                            <img src="./carpetaImagenes/banner-tipo-productos/productos-campamento1.png" alt="montanismo">
+                            <h4>Todo para el momento de acampar</h4>
+                            <p>Dormir, cocinar y pasar el rato</p >                  
+                       </a>
+                    </div>
+                    <div class="banner-tipo-producto-chico-img2">
+                        <a href="#">
+                            <img src="./carpetaImagenes/banner-tipo-productos/productos-montanismo.jpg" alt="campamento"> 
+                            <h4>Equipo para montañismo</h4>
+                            <p>equipate para tu proxima cumbre</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="banner-tipo-producto-mediano2"><a href="#"><img src="./carpetaImagenes/banner-tipo-productos/banner-productos-indumentaria.png" alt="indumentaria"> <h4>Todo en indumentaria</h4><p>sistema de capas, calzado y accesorios</p></a></div>
+                <div class="banner-tipo-producto-mediano2">
+                    <a href="#">
+                        <img src="./carpetaImagenes/banner-tipo-productos/banner-productos-indumentaria.png" alt="indumentaria"> 
+                        <h4>Todo en indumentaria</h4>
+                        <p>sistema de capas, calzado y accesorios</p>
+                    </a>
+                </div>
             </div>
         </div>
     
-</section>
+    </section>
 
-   <section class="productos-destacados">
-    <div class="prod-destacados-container">
-        <div class="prod-destacados-titulo"><h2><p>PRODUCTOS DESTACADOS</p></h2></div>
-        <div class="prod-destacados-container-productos">
-            <div class="contenedor-producto">
-                <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/campera.webp" alt="">
-                <p class="producto-nombre">Campera Ansilta Primaloft</p>
-                <p class="producto-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus corporis voluptate error nobis perspiciatis explicabo ullam nam, et eius tempore rerum repudiandae est nesciunt! In quos error id facere quo?</p>
-                <p class="producto-precio">$ 352000</p>
-                <b class="producto-boton-comprar" id="btn-add-product"><a href="#">COMPRAR</a></b>
-            </div>
-            <div class="contenedor-producto">
-                <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/pedula-amarilla.jpg" alt="">
-                <p class="producto-nombre">La Sportiva Solution</p>
-                <p class="producto-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo veniam optio molestiae animi. Quidem veritatis rem, quia laborum voluptate vel. Quis fuga consequatur blanditiis recusandae iusto, alias tempora atque a?</p>
-                <p class="producto-precio">$ 311000</p>
-                <b class="producto-boton-comprar" id="btn-add-product"><a href="#">COMPRAR</a></b>
-            </div>
-            <div class="contenedor-producto">
-                <img class="producto-imagen" src="./carpetaImagenes/imagenes-productos/mochila-azul.webp" alt="">
-                <p class="producto-nombre">Lowe Alpine Yacuri 65lt</p>
-                <p class="producto-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo dolorem officiis mollitia culpa voluptatum aut! Modi aliquid quod ratione architecto. Vitae inventore error tempora obcaecati expedita, est culpa rerum ipsa?</p>
-                <p class="producto-precio">$ 619000</p>
-                <b class="producto-boton-comprar" id="btn-add-product" ><a href="#">COMPRAR</a></b>
-            </div>
-            <div class="contenedor-producto">
-                <img  class="producto-imagen" src="./carpetaImagenes/imagenes-productos/carpa-blanca.jpg" alt="">
-                <p class="producto-nombre">Naturhike Cloud 2 personas</p>
-                <p class="producto-descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat doloremque eveniet quidem odio labore fugit placeat explicabo maxime, architecto porro rem dolores consequatur perspiciatis possimus eos reiciendis qui velit suscipit!</p>
-                <p class="producto-precio">$ 469000</p>
-                <b class="producto-boton-comprar" id="btn-add-product" ><a href="#">COMPRAR</a></b>
-            </div>
-        </div>
-    </div> 
-   </section>
+    
 
-   <section class="product">
-    <div class="product-header">
+
+
+    <section class="container-filter-and-products">
+
         <h1>PRODUCTOS</h1>
-    </div>  
-    <div class="product-grid">
 
-        <!-- aqui se van a cargar dinamicamente los productos -->
+        <div>
 
-        <!--
-        <article class="product">
-            <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
-            <h3 class="product-name">Nombre del producto</h3>
-            <p class="product-descripcion">Descripcion</p>
-            <p class="product-price">$ 00000</p>
-            <button class="product-button">Comprar</button>
-        </article>
-        -->
-    </div>  
+            <aside>
+                <h2>Filtros</h2>
+                <div class="search-filter">
+                    <input id="input-search-products" type="text" placeholder="Buscar productos">
+                </div>
+
+                <div>
+                    <label><input type="checkbox">Ofertas</label>
+
+                    <div class="category">
+                        <h4>Categorias</h4>
+              
+                        <select id="order-by" name="order-by">
+                            <option value="todos">Todos los productos</option>
+                            <option value="esclada">Escalada</option>
+                            <option value="montanismo">Monañismo</option>
+                            <option value="campamento">Campamento</option>
+                            <option value="indumentaria">Indumentaria</option>
+                        </select>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+                <div class="order-by">
+                    <h4>Ordenar por</h4>
+                    
+                    <label for="">Precio: </label>
+                    <select id="order-by" name="order-by">
+                        <option value="price-asc"> menor a mayor</option>
+                        <option value="price-desc"> mayor a menor</option>
+                    </select>
+                </div>
+
+                <div class="product-grid">
+
+                    <!-- aqui se van a cargar dinamicamente los productos -->
+
+                    <!--
+                    <article class="product">
+                        <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
+                        <h3 class="product-name">Nombre del producto</h3>
+                        <p class="product-descripcion">Descripcion</p>
+                        <p class="product-price">$ 00000</p>
+                        <button class="product-button">Comprar</button>
+                    </article>
+                    -->
+                </div> 
+            </main>
+
+        </div>
+        
+     </section>
+
+
+     
     
 
-   </section>
 
    <br>
    <br>
@@ -173,11 +240,41 @@
    <br>
    <br>
 
-   <section class="contacto">
-    <h1>CONTACTO</h1>
-   </section>
 
-   <footer></footer>
+   <footer>
+
+    <div>
+        <h4>SUSCRIBITE AL NEWSLETTER</h4>
+        <P>Recibí las últimas novedades y promociones en tu email !</P>
+        <form class="newsletter" action="" method="post" >
+            <input type="email" class="input-mail" id="input-mail" name="input-mail" placeholder="E-Mail" required="required">
+            <br>
+            <input type="text" class="input-nombre" id="input-nombre" name="input-nombre" placeholder="Nombre">
+            <br>
+            <input type="submit" class="input-submit" value="SUSCRIBIRME">
+        </form>
+    </div>
+
+    <div>
+        <h4>QUIENES SOMOS</h4>
+        <p>Tienda especializada en equipo de escalada y montaña. Las mejores marcas, Ansilta, La Sportiva, Petzl, Edelrid, Edelweiss, Patagonia, Nature Hike Epic, Lowe Alpine, Altus y muchas más.</p>
+        <div>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+        </div>
+    </div>
+
+    <div>
+        <h4>DATOS DE CONTACTO</h4>
+        <p><i class="bi bi-map-fill"></i> Av. Bonita 1111, 111, Nuñez, C.A.B.A, Buenos Aires, Argentina</p>
+        <p><i class="bi bi-clock"></i> Lun. de 15 a 19hs / Mar-Sáb. de 9 a 19hs</p>
+        <p><i class="bi bi-whatsapp"></i> (011) 1111 1111</p>
+        <p><i class="bi bi-envelope"></i> info@mail.com</p>
+    </div>
+
+    <div></div>
+
+   </footer>
 
    
 </body>
