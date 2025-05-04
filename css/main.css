@@ -22,11 +22,14 @@ body{
 /*====================================================================*/
 /*==========================CABECERA==========================*/
 header{
+    position: fixed;
+    height: 20vh;
     display: flex;
     align-items: center; /*para que queden centrados verticalmente*/
     justify-content: space-between;/*para que deje el espacio bacion entre los elementos en medio de ellos*/
     padding: 0.5% 2%;
     background-color:#f8f9f9 ;
+
 }
 
 .logo {
@@ -122,34 +125,15 @@ header{
  }
     
 
+
+/*==========================SECTION LANDING==========================*/
+.landing{
+    padding-top: 20vh; /*para compensar el espacio que deja el header fixed*/
+}
+
+
+
 /*=============CONTENEDOR DE PRODUCTOS===============*/    
-/*.banner-tipo-producto-contenedor{
-    display: flex;
-    flex-wrap: wrap;
-
-   img {
-            margin: 5%;
-        }
-    .banner-tipo-producto-grande{
-        background-image: url("/carpetaImagenes/banner-tipo-productos/banner-productos-escalada.jpg");
-        width: 50%;
-        background-repeat: no-repeat;
-        background-size: auto;
-    }
-
-
-    .banner-tipo-producto-chico{
-        width: 45%;
-        align-content: space-between;
-        .banner-tipo-producto-chico-img img{
-            width: 100%;
-            margin-left: 10%;
-            
-        }
-    }
-}*/
-
-/*contenedor productos usando BACKGROUND-IMG*/
 
 .banner-tipo-producto{
     .banner-tipo-producto-contenedor{
@@ -347,5 +331,14 @@ header{
     padding: 2%;
     img{
         width: 16rem;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    
+    div{
+        width: 25%
     }
 }
