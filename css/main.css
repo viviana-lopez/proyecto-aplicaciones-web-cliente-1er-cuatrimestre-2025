@@ -23,20 +23,27 @@ body{
 /*==========================CABECERA==========================*/
 header{
     position: fixed;
-    height: 20vh;
+    height: 15vh;
+    width: 100%;
     display: flex;
     align-items: center; /*para que queden centrados verticalmente*/
     justify-content: space-between;/*para que deje el espacio bacion entre los elementos en medio de ellos*/
     padding: 0.5% 2%;
     background-color:#f8f9f9 ;
+    z-index: 2; /*para que no quede debajo del los objetos que tienen positio:relative*/
 
+    .logo {
+    height: 12vh ;
+    }
 }
 
-.logo {
-    max-width: 15%;
-}
+
 
 /*========================NAVBAR=========================================*/
+
+
+/*MENU*/
+
 .nav-list {
     display: flex;/*para que los items se pongan en fila uno al lado del otro*/
     gap: 1rem;/*para darle separacion entre si a los items de la lista*/
@@ -55,7 +62,6 @@ header{
 }
 
 
-
 /*SUBMENU*/
 .nav-list-sublist{
     display: none;/*para ocultar el sub-menu*/
@@ -65,8 +71,15 @@ header{
 .nav-list li:hover > ul {
     display: block;/*para que muestre el sector de submenu que corresponde al item del menu por el cual se hace el hover*/
 }
+
+
+
 /*-------------------------------------------------------------------*/
 .abrir-menu {
+    display: none;
+}
+
+.menu-icon {
     display: none;
 }
 
@@ -91,18 +104,6 @@ header{
     }
 }
 
-/*CARRITO DE COMPRAS*/
-/*.cart{
-   div img{
-    background-color: cornflowerblue;
-        padding: 4px;
-        height: 60px;
-        border-radius: 50%;
-        img{
-            width: 30px;
-        }
-    } 
-}*/
 
 .cart{
     margin-left: 1rem;
@@ -128,104 +129,33 @@ header{
 
 /*==========================SECTION LANDING==========================*/
 .landing{
-    padding-top: 20vh; /*para compensar el espacio que deja el header fixed*/
+    padding-top: 15vh; /*para compensar el espacio que deja el header fixed*/
+    width: 100%;
+    img{
+        width: 100%;
+    }
+   
 }
 
+/*--------------------------------------------------------------------------------------------*/
 
+/*============= SECTION PRODUCTOS DESTACADOS ===============*/    
 
-/*=============CONTENEDOR DE PRODUCTOS===============*/    
+.prod-destacados-container-productos{
+    display: flex;
+}
 
-.banner-tipo-producto{
-    .banner-tipo-producto-contenedor{
-        display: flex;
-        .banner-tipo-producto-grande{
-            width: 50%;
-            margin: 2rem;
-            background-image: url("/carpetaImagenes/banner-tipo-productos/productos-escalada.jpg");
-            min-width: 400px;
-            min-height: 100rem;
-
-            background-position: center; /*para que la imagen quede centrada dentro del contenedor*/
-            background-repeat: no-repeat;/*para que la imagen no se repita*/
-            background-size: cover;/*para que la imagen crezca al tamaño que necesita para cubrir el contenedor*/
-            position: relative;
-
-            a{
-                
-                text-decoration: none;
-                color: rgb(223, 32, 32);
-                
-                h4 {
-                    font-size: 4rem;
-                    text-shadow: 2px;
-                }
-                p{
-                    font-size: 3rem;
-                    text-shadow: 2px;
-                }
-            }
-        }   
-        div{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            
-            
-            .banner-tipo-producto-chico{
-                width: 100%;
-                margin: 2rem;
-                display: flex;
-                flex-direction: row;
-
-                .banner-tipo-producto-chico-img1{
-                    width: 100%;
-                    margin-right: 1rem;
-                    background-image: url("/carpetaImagenes/banner-tipo-productos/productos-campamento1.png");
-                    min-width: 400px;
-                    min-height: 50rem;
-
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    position: relative;
-
-                    a{}
-                }
-                .banner-tipo-producto-chico-img2{
-                    width: 100%;
-                    margin-left: 1rem;
-                    background-image: url("/carpetaImagenes/banner-tipo-productos/productos-montanismo.jpg");
-                    min-width: 400px;
-                    min-height: 50rem;
-
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    position: relative;
-
-                    a{}
-                }
-            }                   
-            .banner-tipo-producto-mediano{
-                width: 100%;
-                margin: 2.5rem;
-                background-image: url("/carpetaImagenes/banner-tipo-productos/banner-productos-indumentaria.png");
-                min-width: 400px;
-                min-height: 50rem;
-
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                position: relative;
-
-                a{}
-            }
-        }
+.contenedor-producto {
+    padding: 2%;
+    img{
+        width: 16rem;
     }
 }
-/*  */
 
-/*contenedor productos utilizando IMG*/
+/* ----------------------------------------------------------------------------------- */
+
+
+/* =======================SECTION BANNER TIPO PRODUCTO================================= */
 
 .banner-tipo-producto2{
     
@@ -273,6 +203,7 @@ header{
             width: 100%;
             display: flex;
             flex-direction: column;
+            align-items: stretch;
             
             
             .banner-tipo-producto-chico2{
@@ -306,12 +237,16 @@ header{
             }                   
             .banner-tipo-producto-mediano2{
                 width: 100%;
-                margin: 2.5rem;
+              
+                display: flex;
+                align-items: flex-end;
                 
 
-                a{
+                a{width: 100%;
                     img{
                         width: 100%;
+                        margin-left: 2rem;
+                        margin-bottom: 2rem;
                     }
                 }
             }
@@ -319,26 +254,52 @@ header{
     }
 }
 
+.banner-tipo-producto-contenedor1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .banner-tipo-producto-mediano img {
     width: 100%;
+    padding: 2rem;
 }
 
-.prod-destacados-container-productos{
-    display: flex;
-}
+/*------------------------------------------------------------------------------------*/
 
-.contenedor-producto {
-    padding: 2%;
-    img{
-        width: 16rem;
+
+/* ============================SECTION FILTER AND PRODUCTS =========================== */
+.container-filter-and-products{
+    h1{
+        text-align: center;
     }
 }
 
+
+
+/* =============================FOOTER============================================== */
+
 footer{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     
+    background-color: black;
+
     div{
-        width: 25%
+        width: 25%;
+        margin: 4vh;
+        h4{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        a{
+            color: white;
+            
+            i{
+                padding-left: 2rem;
+            }
+        }
     }
 }

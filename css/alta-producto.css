@@ -36,14 +36,12 @@ flex-wrap: wrap;
 aside{
     display: flex;
     flex-flow: column wrap;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(228, 218, 204);
     width: 30%;
     padding: 1rem;
 
     h4{
-     
         text-align: center;
-        
     }
 }
 
@@ -52,7 +50,7 @@ aside{
 }
 
 section{
-    background-color: rgb(220, 220, 220);
+    background-color: rgba(191, 181, 163, 0.179);
     margin: 3rem;
     padding: 3rem;
 }
@@ -75,7 +73,7 @@ nav {
                 a {
                     text-decoration: none;/* para borrarle el subrayado al texto del boton*/
                     color: whitesmoke;/*color del texto*/
-                    padding: 1rem;/*para ampliar el espacio alrededor del texto*/
+                    padding: 1rem;/*para ampliar el espacio alrededor del texto*/font-size: 1.5rem;
                 }
             }
         }
@@ -97,9 +95,17 @@ h1 {
     flex-direction: column;
 }
 
+fieldset{
+    border-color: white;
+    border-radius: 16px;
+    border-width: 8px;
+    background-color: white;
+}
+
 legend{
     padding-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    
 }
 
 
@@ -108,9 +114,10 @@ legend{
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 1rem;
+    
 
     fieldset{
-        border-color: blue;
+        border-color: rgb(0, 0, 0);
         border-radius: 8px;
         border-width: 4px;
         margin: 1rem;
@@ -126,7 +133,7 @@ legend{
     display: flex;
     align-items: center;
     justify-content:space-around;
-    
+
     div{
         margin: 1rem;
         padding: 1rem;
@@ -134,7 +141,7 @@ legend{
 }
 
 button:hover{
-    background-color: blue;
+    background-color: red;
 }
 
 /*EL BOTON DE SUBMIT: NO LO PUEDO POSICIONAR A LA DERECHA*/
@@ -143,16 +150,21 @@ button:hover{
     background-color: black;/*color del fondo*/
     border-radius: 8px;/*borde redondeado para el botón*/
     text-decoration: none;/* para borrarle el subrayado al texto del boton*/
-    color: whitesmoke;/*color del texto*/
+    color: whitesmoke;/*color del texto*/ 
     padding: 1rem;/*para ampliar el espacio alrededor del texto*/
+    margin-bottom: 1rem;
 }
 
 .button-submit{
     display: flex;
     align-items: flex-end;
     flex-direction: row-reverse;
+    .button{
+        font-size: 1.5rem;
+    }
+    
 }
 
 .button:hover{
-    background-color: blue;
+    background-color: red;
 }
