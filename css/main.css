@@ -141,6 +141,7 @@ header{
 
 /*============= SECTION PRODUCTOS DESTACADOS ===============*/    
 .prod-destacados-container{
+    background-color: rgb(224, 224, 224);
 
     .prod-destacados-titulo h1{
         text-align: center;
@@ -150,28 +151,82 @@ header{
         font-size: 3rem;
     }
 
-    
-
     .prod-destacados-container-productos{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-    
-
+        justify-content: space-around;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        
         .contenedor-producto {
+            background-color: white;
             padding: 2%;
-            width: 25%;
+            width: 20%;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+            
+            
+            padding: 1rem;
+            margin: 1rem;
+          
+            border-radius: 2rem;
 
             img{
-                width: 16rem;
+               
+                width: 60%;
+                min-width: 250px;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
             }
+            .producto-nombre{
+                font-weight:bolder;
+                font-size:x-large;
+                padding-bottom: 1rem;
+            }
+            .producto-descripcion{
+                text-align: center;
+                padding-bottom: 1rem;
+
+            }
+            .producto-precio{
+                font-weight: bold;
+                font-size:x-large;
+                padding-bottom: 1rem;
+               
+            }
+            .producto-boton-comprar {
+                padding: 1rem;
+                border-radius: 16px;
+                background-color: #F9D423;
+                margin-bottom: 2rem;
+                a{
+                    text-decoration: none;
+                    font-size: x-large;
+                    font-weight: bolder;
+                    color: black;
+                  
+                }
+            }
+            
+            
+
         }
     }
 
 }
 
-
-
+.producto-boton-comprar :hover{
+    background-color: #FF4E50;
+    padding: 1rem;
+    border-radius: 16px;
+                a{
+                    padding-left: 1rem;
+                }
+}
 
 
 /* ----------------------------------------------------------------------------------- */
@@ -364,5 +419,4 @@ footer{
             }
         }
     }
-}
 }
