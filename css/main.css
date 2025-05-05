@@ -140,17 +140,39 @@ header{
 /*--------------------------------------------------------------------------------------------*/
 
 /*============= SECTION PRODUCTOS DESTACADOS ===============*/    
+.prod-destacados-container{
 
-.prod-destacados-container-productos{
-    display: flex;
-}
-
-.contenedor-producto {
-    padding: 2%;
-    img{
-        width: 16rem;
+    .prod-destacados-titulo h1{
+        text-align: center;
+        background: linear-gradient(to left, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 3rem;
     }
+
+    
+
+    .prod-destacados-container-productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+
+        .contenedor-producto {
+            padding: 2%;
+            width: 25%;
+
+            img{
+                width: 16rem;
+            }
+        }
+    }
+
 }
+
+
+
+
 
 /* ----------------------------------------------------------------------------------- */
 
@@ -166,45 +188,18 @@ header{
             width: 100%;
             margin: 2rem;
             
-
-            
-
             a{
-                position: relative;/*para indicar en relacion a que se va a relacionar la posicion absoluta*/ 
-                img{
+                img {
                     width: 100%;
-                     
                 }
-                text-decoration: none;
-                color: rgb(134, 9, 9);
-                
-                h4 {
-                    position: absolute;
-                    border: 1px solid red;
-                    bottom: 40%;
-                    left: 10%;
-                    font-size: 5rem;
-                    font-weight: bold;
-                    text-shadow: 2px;
-                }
-                p{
-                    position: absolute;
-                    border: 1px solid red;
-                    bottom: 30%;
-                    left: 10%;
-                    font-size: 3rem;
-                    text-shadow: 2px;
-                }    
-                
-                
-            }
-        }   
+            }           
+        } 
+
         div{
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: stretch;
-            
+            align-items: stretch; 
             
             .banner-tipo-producto-chico2{
                 width: 100%;
@@ -216,8 +211,6 @@ header{
                     width: 100%;
                     margin-right: 1rem;
                     
-
-
                     a{
                         img{
                             width: 100%;
@@ -234,14 +227,14 @@ header{
                         }
                     }
                 }
-            }                   
+            } 
+
             .banner-tipo-producto-mediano2{
                 width: 100%;
               
                 display: flex;
                 align-items: flex-end;
                 
-
                 a{width: 100%;
                     img{
                         width: 100%;
@@ -270,8 +263,77 @@ header{
 
 /* ============================SECTION FILTER AND PRODUCTS =========================== */
 .container-filter-and-products{
+    width: 100%;
     h1{
+        width: 100%;
+        font-size: 4rem;
         text-align: center;
+        background: linear-gradient(to left, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        
+    }
+
+    div{
+        display: flex;
+        
+
+        aside{
+            background: #F9D423;
+            padding: 2rem;
+
+            h2{
+                text-align: center;
+                padding: 1rem;
+                font-size: 2.5rem;
+                border:2px solid #FF4E50;
+                margin-bottom: 2rem;
+            }
+
+            .filter-container-name input{
+               
+            }
+
+            .filter-container-by-category{
+                display: flex;
+                flex-direction: column;
+                padding-top: 2rem;
+
+                label{
+                    font-size: 1.5rem;
+                    input{
+                        margin: 1rem;
+                       
+                    }
+                }
+
+                .search-by-category{
+                    padding-top: 2rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        main{
+            .filter-order-by{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                margin: 2rem;
+                padding-right: 5rem;
+                font-size: 1.5rem;
+
+                label{
+                    padding-left: 2rem;
+                    padding-right: 1rem;
+                }
+            }
+
+            .product-grid{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
     }
 }
 
@@ -302,4 +364,5 @@ footer{
             }
         }
     }
+}
 }
