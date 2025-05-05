@@ -167,16 +167,11 @@ header{
             display: flex;
             flex-direction: column;
             align-items: center;
-        
-            
-            
             padding: 1rem;
             margin: 1rem;
-          
             border-radius: 2rem;
 
-            img{
-               
+            img{   
                 width: 60%;
                 min-width: 250px;
                 margin-top: 2rem;
@@ -198,35 +193,28 @@ header{
                 padding-bottom: 1rem;
                
             }
-            .producto-boton-comprar {
+            button{
                 padding: 1rem;
                 border-radius: 16px;
                 background-color: #F9D423;
                 margin-bottom: 2rem;
-                a{
-                    text-decoration: none;
-                    font-size: x-large;
-                    font-weight: bolder;
-                    color: black;
-                  
-                }
+                font-size: x-large;
+                font-weight: bolder;
+                color: black;   
+            }   
+
+            button:hover{
+                background-color:#FF4E50;
+                         
             }
-            
-            
 
         }
     }
 
 }
 
-.producto-boton-comprar :hover{
-    background-color: #FF4E50;
-    padding: 1rem;
-    border-radius: 16px;
-                a{
-                    padding-left: 1rem;
-                }
-}
+/*ya intente de todo y no logro que el color rojo cubra todo el boton al momento del hover*/
+
 
 
 /* ----------------------------------------------------------------------------------- */
@@ -286,11 +274,12 @@ header{
 
             .banner-tipo-producto-mediano2{
                 width: 100%;
-              
                 display: flex;
                 align-items: flex-end;
                 
-                a{width: 100%;
+                a{
+                    width: 100%;
+
                     img{
                         width: 100%;
                         margin-left: 2rem;
@@ -319,14 +308,14 @@ header{
 /* ============================SECTION FILTER AND PRODUCTS =========================== */
 .container-filter-and-products{
     width: 100%;
+
     h1{
         width: 100%;
         font-size: 4rem;
         text-align: center;
         background: linear-gradient(to left, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         padding-top: 2rem;
-        padding-bottom: 2rem;
-        
+        padding-bottom: 2rem;    
     }
 
     div{
@@ -370,6 +359,8 @@ header{
         }
 
         main{
+            margin: 2rem;
+
             .filter-order-by{
                 display: flex;
                 flex-direction: row;
@@ -387,12 +378,74 @@ header{
             .product-grid{
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-around;
+
+                article{
+                    margin: 2rem;
+                    border: 2px solid  red;
+                    background-color: white;
+                    padding: 2%;
+                    width: 20%;
+                    min-width: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+                    margin: 1rem;
+                    border-radius: 2rem;
+
+                    img{
+               
+                        width: 60%;
+                        min-width: 250px;
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    .card-title{
+                        font-weight:bolder;
+                        font-size:x-large;
+                        padding-bottom: 1rem;
+                    }
+
+                    .card-description{
+                        text-align: center;
+                        padding-bottom: 1rem;
+        
+                    }
+
+                    .card-price{
+                        font-weight: bold;
+                        font-size:x-large;
+                        padding-bottom: 1rem;
+                       
+                    }
+
+                    .card-button {
+                        padding: 1rem;
+                        border-radius: 16px;
+                        background-color: #F9D423;
+                        margin-bottom: 2rem;
+                        text-decoration: none;
+                        font-size: x-large;
+                        font-weight: bolder;
+                        color: black;
+                    }
+
+                    .card-button:hover{
+                        background-color: #FF4E50;
+                    }
+
+                }
             }
         }
     }
 }
 
-
+button:hover{
+    background-color: #FF4E50;
+}
 
 /* =============================FOOTER============================================== */
 
