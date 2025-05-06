@@ -22,9 +22,7 @@
 <body><!-- Aquí va el contenido de la web-->
     <header>
 
-            <img class="logo" src="./carpetaImagenes/LogoNegro.png" alt="Logo Mountain ">
-
-            <!--<button><img class="abrir-menu" src="./carpetaImagenes/menu-hamburguesa.png" alt=""></button> -->
+            <img class="logo" src="./carpetaImagenes/LogoBlanco.png" alt="Logo Mountain ">
 
             <nav class="nav">
                 <ul class="nav-list">
@@ -66,21 +64,25 @@
                 </ul>
             </nav>
 
-            <!--BUSCADOR DE PRODUCTOS-->
-            <div class="serchbar">
-                <div>
-                    <input type="text" placeholder="Buscar producto"> <i class="bi bi-search"></i>
+
+            <div class="derecha-nav">
+                <!--BUSCADOR DE PRODUCTOS-->
+                <div class="serchbar">
+                    <div>
+                        <input type="text" placeholder="Buscar producto"> <i class="bi bi-search"></i>
+                    </div>    
                 </div>
-               
+
+                <div class="menu-icon"><button><i class="bi bi-list"></i></button></div>
+                <div class="cart"><button><i class="bi bi-bag"></i></button></div>
+                <!--agregar carrito de compras-->
+          
             </div>
+            
 
-            <!--agregar carrito de compras-->
-            <!--<div class="cart">
-                <div><img class="cart-image" src="./carpetaImagenes/CarritoDeCompras.png" alt="carrito de compras"></div>
-            </div> -->
-            <div class="cart"><h2><i class="bi bi-bag"></i></h2></div>
+            
 
-            <div class="menu-icon"><h2><i class="bi bi-list"></i></h2></div>
+            
             
     </header>  
 
@@ -128,7 +130,7 @@
         
         <div class="banner-tipo-producto-contenedor2">
             <div class="banner-tipo-producto-grande2" alt="escalada">
-                <a href="#"><img src="./carpetaImagenes/banner-tipo-productos/escalada.png" alt="">
+                <a href="#productos"><img src="./carpetaImagenes/banner-tipo-productos/escalada.png" alt="">
                     <!--<h4>Equipamiento para escalada</h4>
                     <p>Todo para una salida perfecta y segura</p> -->
                 </a>
@@ -136,14 +138,14 @@
             <div class="banner-tipo-producto-contenedor1">
                 <div class="banner-tipo-producto-chico2">
                     <div class="banner-tipo-producto-chico-img1">
-                        <a href="#">
+                        <a href="#productos">
                             <img src="./carpetaImagenes/banner-tipo-productos/acampar.png" alt="montanismo">
                             <!-- <h4>Todo para el momento de acampar</h4>
                             <p>Dormir, cocinar y pasar el rato</p >    -->              
                        </a>
                     </div>
                     <div class="banner-tipo-producto-chico-img2">
-                        <a href="#">
+                        <a href="#productos">
                             <img src="./carpetaImagenes/banner-tipo-productos/montanismo.png" alt="campamento"> 
                             <!-- <h4>Equipo para montañismo</h4>
                             <p>equipate para tu proxima cumbre</p> -->
@@ -151,7 +153,7 @@
                     </div>
                 </div>
                 <div class="banner-tipo-producto-mediano2">
-                    <a href="#">
+                    <a href="#productos">
                         <img src="./carpetaImagenes/banner-tipo-productos/indumentaria.png" alt="indumentaria"> 
                         <!-- <h4>Todo en indumentaria</h4>
                         <p>sistema de capas, calzado y accesorios</p> -->
@@ -166,11 +168,11 @@
 
 
 
-    <section class="container-filter-and-products">
+    <section class="container-filter-and-products" id="productos">
 
         <h1>PRODUCTOS</h1>
 
-        <div>
+        <div class="container-section-filter">
 
             <aside class="filter-container">
                 <h2>Filtros</h2>
@@ -196,7 +198,7 @@
             </aside>
 
             <main>
-                <div class="filter-order-by">
+                <div class="filter-order-by" >
                     <i class="bi bi-sort-down-alt"></i>
                     <h4> Ordenar por </h4>
                     
@@ -207,7 +209,7 @@
                     </select>
                 </div>
 
-                <div class="product-grid">
+                <div class="product-grid" >
 
                     <!-- aqui se van a cargar dinamicamente los productos -->
 

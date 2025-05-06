@@ -23,17 +23,18 @@ body{
 /*==========================CABECERA==========================*/
 header{
     position: fixed;
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     display: flex;
+       flex-direction: row;
     align-items: center; /*para que queden centrados verticalmente*/
     justify-content: space-between;/*para que deje el espacio bacion entre los elementos en medio de ellos*/
     padding: 0.5% 2%;
-    background-color:#f8f9f9 ;
+    background-color:  rgb(38, 38, 38);
     z-index: 2; /*para que no quede debajo del los objetos que tienen positio:relative*/
 
     .logo {
-    height: 12vh ;
+    height: 9vh ;
     }
 }
 
@@ -46,19 +47,21 @@ header{
 
 .nav-list {
     display: flex;/*para que los items se pongan en fila uno al lado del otro*/
+ 
     gap: 1rem;/*para darle separacion entre si a los items de la lista*/
 }
 
 .nav-list li a {
     display: block;/*para que los elementos de la lista no se superpongan entre si*/
     text-decoration: none;/*para quitarle el subrayado del link*/
-    color: black;
+    color: white;
     padding: 0.5rem;
-    background-color: white;
+    background-color: rgb(38, 38, 38);
+    font-size:xx-large;
 }
 
 .nav-list li a:hover {
-    color: green;
+    color: red;
 }
 
 
@@ -73,63 +76,83 @@ header{
 }
 
 
-
-/*-------------------------------------------------------------------*/
-.abrir-menu {
-    display: none;
-}
-
-.menu-icon {
-    display: none;
-}
-
-/*BUSCADOR DE PRODUCTOS*/
-.serchbar{
-    background-color: aquamarine;
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-  
-    input{
-        height: 40px;
-        border: none;
-        padding: 0rem 0.5rem 0rem 0.5rem;
-        margin: 0rem 0.5rem 0rem 0.5rem;
-        font-size: medium;
-    }
-    img{
-        height: 30px;
-    }
-}
-
-
-.cart{
-    margin-left: 1rem;
-    div {
-     background-color: cornflowerblue;
-         padding: 4px;
-         height: 60px;
-         width: 60px;
-         border-radius: 50%;
-         /*lo de abajo para centrar el carrito dentro del fondo redondo*/
-         display: flex;
-        justify-content: center;
-        align-items: center;
-         img{
-            
-             width: 30px;
-             margin-right: 4px;/*para que la imagen se vea más centrada por la forma del carrito*/
-         }
-     } 
- }
+@media screen and {(max-width: 480px)
     
+}
+
+
+/*===sector derecho (buscador, icono menu hamburguesa, icono carrito)*/
+.derecha-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-right: 1rem;
+
+    /*BUSCADOR DE PRODUCTOS*/
+    .serchbar{
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding-right: 0.5rem; 
+        display: flex;
+        align-items: center;
+  
+        input{
+            height: 40px;
+            border: none;
+            padding: 0rem 0.5rem 0rem 0.5rem;
+            margin: 0rem 0.5rem 0rem 0.5rem;
+            font-size: x-large;
+            
+        }   
+        div{
+            .bi-search{
+            font-size: x-large;
+        }
+        }
+        
+        
+    }
+
+    .menu-icon {
+        display: none;
+        button{
+            background-color: rgb(38, 38, 38);
+            i{
+                margin-left: 1rem;
+               
+                color: white; 
+            }
+        } 
+    }
+
+    .cart{
+        margin-left: 1rem;
+        button{
+            background-color: rgb(38, 38, 38);
+            border: none;
+            i{
+                margin-left: 1rem;
+                font-size: xx-large;
+                color: white; 
+            }
+        }  
+    }
+
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------*/    
 
 
 /*==========================SECTION LANDING==========================*/
 .landing{
-    padding-top: 15vh; /*para compensar el espacio que deja el header fixed*/
+    padding-top: 10vh; /*para compensar el espacio que deja el header fixed*/
     width: 100%;
     img{
         width: 100%;
@@ -302,6 +325,50 @@ header{
     padding: 2rem;
 }
 
+@media screen and (max-width: 768px){
+    .banner-tipo-producto-contenedor2{
+        display: flex;
+        flex-direction: column;
+
+        .banner-tipo-producto-contenedor1{
+            display: flex;
+            flex-direction: column;
+
+            .banner-tipo-producto-chico2{
+                display: flex;
+                flex-direction: column;
+                }
+                
+            }
+        }
+    }
+
+
+
+@media screen and (max-width: 480px){
+    .banner-tipo-producto-contenedor2{
+        display: flex;
+        flex-direction: column;
+
+        .banner-tipo-producto-contenedor1{
+            display: flex;
+            flex-direction: column;
+
+            .banner-tipo-producto-chico2{
+                display: flex;
+                flex-wrap: wrap;
+
+                    div{ 
+                        width: 480px;
+                    
+                    }
+                }
+               
+            }
+        }
+    }
+
+
 /*------------------------------------------------------------------------------------*/
 
 
@@ -320,11 +387,13 @@ header{
 
     div{
         display: flex;
-        
+
 
         aside{
             background: #F9D423;
             padding: 2rem;
+  
+        
 
             h2{
                 text-align: center;
@@ -447,16 +516,26 @@ button:hover{
     background-color: #FF4E50;
 }
 
+
+@media screen and (max-width: 480px){
+    .container-section-filter{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* =============================FOOTER============================================== */
 
 footer{
+    width: 100%;
     display: flex;
     justify-content: center;
-    
+    flex-wrap: wrap;
     background-color: black;
-
-    div{
-        width: 25%;
+    
+    .footer-newsletter{
+        min-width: 400px;
+        width: 15%;
         margin: 4vh;
         h4{
             color: white;
@@ -472,4 +551,44 @@ footer{
             }
         }
     }
+
+
+    .footer-quienes-somos{
+        width: 20%;
+        min-width: 400px;
+        margin: 4vh;
+        h4{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        a{
+            color: white;
+            
+            i{
+                padding-left: 2rem;
+            }
+        }
+    }
+
+    .footer-contacto{
+        width: 25%;
+        min-width: 400px;
+        margin: 4vh;
+        h4{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        a{
+            color: white;
+            
+            i{
+                padding-left: 2rem;
+            }
+        }
+    }
+    
 }
