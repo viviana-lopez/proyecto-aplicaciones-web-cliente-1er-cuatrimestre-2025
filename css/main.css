@@ -233,6 +233,8 @@ header{
             padding: 1rem;
             margin: 1rem;
             border-radius: 2rem;
+            box-shadow: 10px 10px 20px rgba(62,62,62, 0.2);
+            border: solid 4px white;
 
             img{   
                 width: 60%;
@@ -271,6 +273,10 @@ header{
                          
             }
 
+        }
+
+        .contenedor-producto:hover{
+            border-color: #FF4E50;
         }
     }
 
@@ -350,6 +356,10 @@ header{
                     }
                 }
             }
+        }
+
+        img:hover{
+            border: solid 8px white;
         }
     }
 }
@@ -467,7 +477,8 @@ header{
         }
 
         main{
-            margin: 2rem;
+            padding: 2rem;
+            background-color: rgb(224, 224, 224);
 
             .filter-order-by{
                 display: flex;
@@ -487,6 +498,7 @@ header{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
+                
 
                 article{
                     margin: 2rem;
@@ -502,6 +514,8 @@ header{
                     padding: 1rem;
                     margin: 1rem;
                     border-radius: 2rem;
+                    box-shadow: 10px 10px 20px rgba(62,62,62, 0.2);
+                    border: solid 4px white;
 
                     img{
                
@@ -545,6 +559,10 @@ header{
                         background-color: #FF4E50;
                     }
 
+                }
+
+                article:hover{
+                    border-color: #FF4E50;
                 }
             }
         }
