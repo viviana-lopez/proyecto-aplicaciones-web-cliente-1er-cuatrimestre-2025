@@ -1,3 +1,10 @@
+// token de airtable:   patsG1CAdiE2R9SAc.6d793054e0768422d0c9489bba8a79bd57d8718ac5fb22ed65186903460c20fd
+const API_TOKEN = 'patsG1CAdiE2R9SAc.6d793054e0768422d0c9489bba8a79bd57d8718ac5fb22ed65186903460c20fd';
+const BASE_ID = 'appRff7Oy9Kxub7TA';
+const TABLE_NAME = 'Products';
+const API_URL = 'https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}';
+
+
 //*****************definicion de la variable producto*******************
 const products =[
     {

@@ -26,39 +26,39 @@
 
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="#">ESCALADA</a>
+                    <li><a href="#" data-filter="">INICIO</a></li>
+                    <li><a href="#" data-filter="todos">TODOS LOS PRODUCTOS</a></li>
+                    <li><a href="#" data-filter="escalada">ESCALADA</a>
                         <ul class="nav-list-sublist">
-                            <li><a href="#">ARNESES</a></li>
-                            <li><a href="#">CASCOS</a></li>
-                            <li><a href="#">CUERDAS Y CORDINES</a></li>
-                            <li><a href="#">MOSQUETONES</a></li>
-                            <li><a href="#">ZAPATILLAS</a></li>
-                            <li><a href="#">ACCESORIOS</a></li>
+                            <li><a href="#" data-filter="arneses">ARNESES</a></li>
+                            <li><a href="#" data-filter="cascos" >CASCOS</a></li>
+                            <li><a href="#" data-filter="cuerdas">CUERDAS Y CORDINES</a></li>
+                            <li><a href="#" data-filter="mosquetones">MOSQUETONES</a></li>
+                            <li><a href="#" data-filter="calzado">ZAPATILLAS</a></li>
+                            <li><a href="#" data-filter="accesorios">ACCESORIOS</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">MONTAÑISMO</a>
+                    <li><a href="#" data-filter="montanismo">MONTAÑISMO</a>
                         <ul class="nav-list-sublist">
-                            <li><a href="#">MOCHILAS</a></li>
-                            <li><a href="#">CALZADO</a></li>
-                            <li><a href="#">MATERIAL</a></li>
-                            <li><a href="#">MAPAS</a></li>
+                            <li><a href="#" data-filer="mochilas">MOCHILAS</a></li>
+                            <li><a href="#" data-filter="calzado">CALZADO</a></li>
+                            <li><a href="#" data-filter="material">MATERIAL</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">CAMPAMENTO</a>
+                    <li><a href="#" data-filter="campamento">CAMPAMENTO</a>
                         <ul class="nav-list-sublist">
-                            <li><a href="#">CARPAS</a></li>
-                            <li><a href="#">BOLSAS DE DORMIR</a></li>
-                            <li><a href="#">AISLANTES</a></li>
-                            <li><a href="#">CALENTADORES</a></li>
+                            <li><a href="#" data-filter="carpas">CARPAS</a></li>
+                            <li><a href="#" data-filter="bolsas">BOLSAS DE DORMIR</a></li>
+                            <li><a href="#" data-filter="aislantes">AISLANTES</a></li>
+                            <li><a href="#" data-filter="calentadores">CALENTADORES</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">INDUMENTARIA</a>
+                    <li><a href="#" data-filter="indumentaria">INDUMENTARIA</a>
                         <ul class="nav-list-sublist">
-                            <li><a href="#">PRENDAS</a></li>
-                            <li><a href="#">INTERIORES</a></li>
-                            <li><a href="#">CALZADO</a></li>
-                            <li><a href="#">ACCESORIOS</a></li>
+                            <li><a href="#" data-filter="prendas">PRENDAS</a></li>
+                            <li><a href="#" data-filter="interiores">INTERIORES</a></li>
+                            <li><a href="#" data-filter="calzado">CALZADO</a></li>
+                            <li><a href="#" data-filter="accesorios">ACCESORIOS</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,12 +78,7 @@
                 <!--agregar carrito de compras-->
           
             </div>
-            
-
-            
-
-            
-            
+                    
     </header>  
 
     <section class="landing">
@@ -187,11 +182,11 @@
                         <h4>Categorias</h4>
               
                         <select id="order-by" name="order-by">
-                            <option value="todos">Todos los productos</option>
-                            <option value="esclada">Escalada</option>
-                            <option value="montanismo">Monañismo</option>
-                            <option value="campamento">Campamento</option>
-                            <option value="indumentaria">Indumentaria</option>
+                            <option value="todos" data-filter="todos">Todos los productos</option>
+                            <option value="escalada" data-filter="escalada">Escalada</option>
+                            <option value="montanismo" data-filter="montanismo">Montañismo</option>
+                            <option value="campamento" data-filter="campamento">Campamento</option>
+                            <option value="indumentaria" data-filter="indumentaria">Indumentaria</option>
                         </select>
                     </div>
                 </div>
@@ -209,7 +204,7 @@
                     </select>
                 </div>
 
-                <div class="product-grid" >
+                <div class="product-grid" id="productGrid">
 
                     <!-- aqui se van a cargar dinamicamente los productos -->
 
@@ -223,6 +218,21 @@
                     </article>
                     -->
                 </div> 
+
+                <div class="products-grid" >
+
+                    <!-- aqui se van a cargar dinamicamente los productos -->
+
+                    <!--
+                    <article class="product-card">
+                        <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
+                        <h3 class="card-title">Nombre del producto</h3>
+                        <p class="card-descripcion">Descripcion</p>
+                        <p class="card-price">$ 00000</p>
+                        <button class="card-button">Comprar</button>
+                    </article>
+                    -->
+                </div>
             </main>
 
         </div>
@@ -275,5 +285,7 @@
 
    
 </body>
-<script src="./js/main.js"></script>
+<!--<script src="./js/main.js"></script> -->
+
+<script src="./js/otroMain.js"></script>
 </html>
