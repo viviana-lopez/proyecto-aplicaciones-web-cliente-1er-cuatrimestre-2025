@@ -61,6 +61,12 @@ function createProductCard(product){
     price.classList.add('card-price');
     price.textContent = `$${product.price}`;
 
+    //creo el <button class="view-button" id="{id}"
+    const idbutton = document.createElement('button');
+    idbutton.classList.add('view-button');
+    idbutton.id = product.id;
+    idbutton.textContent = 'Ver producto';
+
     //creo el <button class="card-button"
     const button = document.createElement('button');
     button.classList.add('card-button');
@@ -71,6 +77,7 @@ function createProductCard(product){
     card.appendChild(title);
     card.appendChild(description);
     card.appendChild(price);
+    card.appendChild(idbutton);
     card.appendChild(button);
 
     //retorno la tarjeta para que se cree en el HTML
@@ -168,7 +175,8 @@ async function getProducts() {
             shortDescription: item.fields.shortDescription,
             longDescription: item.fields.longDescription,
             image: item.fields.image,
-            price: item.fields.price
+            price: item.fields.price,
+            id: item.fields.id,
         };
         
     });
@@ -177,8 +185,12 @@ async function getProducts() {
 
 getProducts();
 
-
-
+//para que aparezca el mensaje de mensaje enviado con exito al enviar el formulario de contacto
+const msg = localStorage.getItem('contactMessage');
+  if (msg) {
+    alert(msg); // o podés mostrarlo en el DOM
+    localStorage.removeItem('contactMessage');
+}
 
 /* creacion de la descripcion del producto*/
 
