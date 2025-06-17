@@ -78,14 +78,7 @@ function createProductCard(product){
 }
 
 
-// function renderProducts() {
-//     productContainer.innerHTML = '';
-//     filteredProducts.forEach(product =>{
-//         const card = createProductCard(product);
-//         productContainer.appendChild(card);
-//     });
-// }
-
+// =========== renderProducts funcion para poder representar los objetos(productos)/informacion traida desde AIRTABLE en las tarjetas de productos
 function renderProducts(productsToRender) {
     productContainer.innerHTML = '';
     productsToRender.forEach(product => {
@@ -94,23 +87,23 @@ function renderProducts(productsToRender) {
     });
 }
 
+// ============ EVENTO Y FUNCION PARA IMPLEMENTAR EL ORDENAR LOS PRODUCTOS POR PRECIO
+const orderBySelect = document.querySelector('select[name="order-by"]');
 
-// =========== renderProducts funcion para poder representar los objetos(productos)/informacion traida desde AIRTABLE en las tarjetas de productos
-// en la primer parte se realiza el filtro por categoria/subcategoria seleccionada y por nombre ingresado en el buscador 
-// en la segunda parte se utilizan los datos filtrados utilizando el metodo map() para crear un nuevo array con los resultados de la llamada a la funcion
-// renderProducts=productosRepresentados
-// function filterProducts(){
-//     const searchQuery = searchInput.value.toLowerCase();
-//     const filteredProducts = allProducts.filter(product => {
-//         const matchesFilter = !currentFilter || product.category === currentFilter || product.subCategory === currentFilter;
-//         const matchesSearch = product.name.toLowerCase().includes(searchQuery);
-//         return matchesFilter && matchesSearch;
-//     });
+orderBySelect.addEventListener('change', () => {
+    const value = orderBySelect.value;
+    let productsToRender = [...allProducts];
 
-//     productContainer.innerHTML = ''; //limpia los valores iniciales
-//     renderProducts(filteredProducts); //le asigna los valores filtrados a render products    
-// };
+    if (value === 'price-asc') {
+        productsToRender.sort((a, b) => a.price - b.price);
+    } else if (value === 'price-desc') {
+        productsToRender.sort((a, b) => b.price - a.price);
+    }
 
+    renderProducts(productsToRender);
+});
+
+// == FUNCION PARA PODER APLICAR LOS FILTROS POR NOMBRE Y CATEGORIAS
 function filterProducts(){
     const searchQuery = searchInput.value.toLowerCase();
     const filteredProducts = allProducts.filter(product => {
@@ -148,23 +141,7 @@ document.getElementById('order-by').addEventListener('change', function () {
     }
   });
 });
-// ====================== EVENTOS PARA PODER TOMAR LOS DATOS DE LOS FILTROS==========================
-// document.querySelectorAll('[data-filter]').forEach(el => {
-//     el.addEventListener('click', e => {
-//         e.preventDefault();
-//         currentFilter = el.dataset.filter;
-//         renderProducts();
-//     });
-// });
-//searchInput.addEventListener('input', renderProducts);
 
-// document.querySelectorAll('[data-filter]').forEach(el => {
-//     el.addEventListener('click', e => {
-//         e.preventDefault();
-//         currentFilter = el.dataset.filter;
-//         filterProducts(); // no renderProducts()
-//     });
-// });
 
 searchInput.addEventListener('input', filterProducts); // también
 
