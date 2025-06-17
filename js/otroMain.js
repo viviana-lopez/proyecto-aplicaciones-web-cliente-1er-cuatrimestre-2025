@@ -1,9 +1,10 @@
 
 // token de airtable:   patsG1CAdiE2R9SAc.6d793054e0768422d0c9489bba8a79bd57d8718ac5fb22ed65186903460c20fd
 const API_TOKEN = 'patsG1CAdiE2R9SAc.6d793054e0768422d0c9489bba8a79bd57d8718ac5fb22ed65186903460c20fd';
-const BASE_ID = 'appRff7Oy9Kxub7TA';
-const TABLE_NAME = 'Products';
-const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
+//const BASE_ID = 'appRff7Oy9Kxub7TA';
+//const TABLE_NAME = 'Products';
+//const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
+const API_URL = `https://api.airtable.com/v0/appRff7Oy9Kxub7TA/producto`;
 
 //==================================================================================================
 //===================== CONSTANTES Y valores inciales de FILTROS ===============================================================
@@ -77,18 +78,39 @@ function createProductCard(product){
 }
 
 
-function renderProducts() {
+// function renderProducts() {
+//     productContainer.innerHTML = '';
+//     filteredProducts.forEach(product =>{
+//         const card = createProductCard(product);
+//         productContainer.appendChild(card);
+//     });
+// }
+
+function renderProducts(productsToRender) {
     productContainer.innerHTML = '';
-    filteredProducts.forEach(product =>{
+    productsToRender.forEach(product => {
         const card = createProductCard(product);
         productContainer.appendChild(card);
     });
 }
 
+
 // =========== renderProducts funcion para poder representar los objetos(productos)/informacion traida desde AIRTABLE en las tarjetas de productos
 // en la primer parte se realiza el filtro por categoria/subcategoria seleccionada y por nombre ingresado en el buscador 
 // en la segunda parte se utilizan los datos filtrados utilizando el metodo map() para crear un nuevo array con los resultados de la llamada a la funcion
 // renderProducts=productosRepresentados
+// function filterProducts(){
+//     const searchQuery = searchInput.value.toLowerCase();
+//     const filteredProducts = allProducts.filter(product => {
+//         const matchesFilter = !currentFilter || product.category === currentFilter || product.subCategory === currentFilter;
+//         const matchesSearch = product.name.toLowerCase().includes(searchQuery);
+//         return matchesFilter && matchesSearch;
+//     });
+
+//     productContainer.innerHTML = ''; //limpia los valores iniciales
+//     renderProducts(filteredProducts); //le asigna los valores filtrados a render products    
+// };
+
 function filterProducts(){
     const searchQuery = searchInput.value.toLowerCase();
     const filteredProducts = allProducts.filter(product => {
@@ -97,21 +119,56 @@ function filterProducts(){
         return matchesFilter && matchesSearch;
     });
 
-    productContainer.innerHTML = ''; //limpia los valores iniciales
-    renderProducts(filteredProducts); //le asigna los valores filtrados a render products    
-};
+    renderProducts(filteredProducts);   
+}
 
-
-// ====================== EVENTOS PARA PODER TOMAR LOS DATOS DE LOS FILTROS==========================
+// EVENTO PARA CAPTURAR CLIC EN LAS CATEGORÍAS Y APLICAR FILTRO
 document.querySelectorAll('[data-filter]').forEach(el => {
-    el.addEventListener('click', e => {
-        e.preventDefault();
-        currentFilter = el.dataset.filter;
-        renderProducts();
+    el.addEventListener('click', (e) => {
+        e.preventDefault(); // prevenir el salto #
+        currentFilter = el.getAttribute('data-filter');
+        filterProducts();
     });
 });
 
-searchInput.addEventListener('input', renderProducts);
+document.getElementById('order-by').addEventListener('change', function () {
+  const selectedCategory = this.value;
+
+  // Obtener todos los productos
+  const products = document.querySelectorAll('.product');
+
+  products.forEach(product => {
+    const category = product.getAttribute('data-category');
+
+    // Mostrar todos si es "todos", si no, solo los que coinciden
+    if (selectedCategory === 'todos' || category === selectedCategory) {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+});
+// ====================== EVENTOS PARA PODER TOMAR LOS DATOS DE LOS FILTROS==========================
+// document.querySelectorAll('[data-filter]').forEach(el => {
+//     el.addEventListener('click', e => {
+//         e.preventDefault();
+//         currentFilter = el.dataset.filter;
+//         renderProducts();
+//     });
+// });
+//searchInput.addEventListener('input', renderProducts);
+
+// document.querySelectorAll('[data-filter]').forEach(el => {
+//     el.addEventListener('click', e => {
+//         e.preventDefault();
+//         currentFilter = el.dataset.filter;
+//         filterProducts(); // no renderProducts()
+//     });
+// });
+
+searchInput.addEventListener('input', filterProducts); // también
+
+
 
 
 // =====funcion asincrona PARA CARGAR LOS PRODUCTOS DESDE LA TABLA DE AIRTABLE  fetchProducts=obtenerProductos=getProducts para obtener/acceder a los datos de los productos de nuestra tabla de AIRTABLE

@@ -14,7 +14,7 @@
 
     <!-- vinculacion a la hoja de estilo main.css-->
     <link rel="stylesheet" href="./css/main.css"> 
-
+    <script src="./js/otroMain.js" defer=""></script>
     <!--iconos de bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -27,7 +27,7 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#" data-filter="">INICIO</a></li>
-                    <li><a href="#" data-filter="todos">TODOS LOS PRODUCTOS</a></li>
+                    <li><a href="#" data-filter="">TODOS LOS PRODUCTOS</a></li>
                     <li><a href="#" data-filter="escalada">ESCALADA</a>
                         <ul class="nav-list-sublist">
                             <li><a href="#" data-filter="arneses">ARNESES</a></li>
@@ -180,14 +180,22 @@
 
                     <div class="search-by-category">
                         <h4>Categorias</h4>
-              
-                        <select id="order-by" name="order-by">
+                        <div>
+                            <ul>
+                                <li><a href="#" data-filter="">TODOS LOS PRODUCTOS</a></li>
+                                <li><a href="#" data-filter="escalada">ESCALADA</a></li>
+                                <li><a href="#" data-filter="montanismo">MONTAÑISMO</a></li>
+                                <li><a href="#" data-filter="indumentaria">INDUMENTARIA</a></li>
+                            </ul>
+                        </div>
+                        <!-- <select id="order-by" name="order-by">
                             <option value="todos" data-filter="todos">Todos los productos</option>
                             <option value="escalada" data-filter="escalada">Escalada</option>
                             <option value="montanismo" data-filter="montanismo">Montañismo</option>
                             <option value="campamento" data-filter="campamento">Campamento</option>
                             <option value="indumentaria" data-filter="indumentaria">Indumentaria</option>
-                        </select>
+                        </select> -->
+                        
                     </div>
                 </div>
             </aside>
@@ -219,20 +227,6 @@
                     -->
                 </div> 
 
-                <div class="products-grid" >
-
-                    <!-- aqui se van a cargar dinamicamente los productos -->
-
-                    <!--
-                    <article class="product-card">
-                        <img class="product-img" src="./carpetaImagenes/imagen9_campera_aconcagua_4_gore_tex_3c_pro_expedicio.webp" alt="">
-                        <h3 class="card-title">Nombre del producto</h3>
-                        <p class="card-descripcion">Descripcion</p>
-                        <p class="card-price">$ 00000</p>
-                        <button class="card-button">Comprar</button>
-                    </article>
-                    -->
-                </div>
             </main>
 
         </div>
@@ -287,5 +281,5 @@
 </body>
 <!--<script src="./js/main.js"></script> -->
 
-<script src="./js/otroMain.js"></script>
+
 </html>
