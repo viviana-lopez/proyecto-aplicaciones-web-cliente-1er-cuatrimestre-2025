@@ -125,21 +125,21 @@ document.querySelectorAll('[data-filter]').forEach(el => {
 });
 
 document.getElementById('order-by').addEventListener('change', function () {
-  const selectedCategory = this.value;
+   const selectedCategory = this.value;
 
-  // Obtener todos los productos
-  const products = document.querySelectorAll('.product');
+    // Obtener todos los productos
+    const products = document.querySelectorAll('.product');
 
-  products.forEach(product => {
-    const category = product.getAttribute('data-category');
+    products.forEach(product => {
+        const category = product.getAttribute('data-category');
 
-    // Mostrar todos si es "todos", si no, solo los que coinciden
-    if (selectedCategory === 'todos' || category === selectedCategory) {
-      product.style.display = 'block';
-    } else {
-      product.style.display = 'none';
-    }
-  });
+        // Mostrar todos si es "todos", si no, solo los que coinciden
+        if (selectedCategory === 'todos' || category === selectedCategory) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
 });
 
 

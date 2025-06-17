@@ -1,0 +1,35 @@
+  body {
+    background:linear-gradient(to left, #F9D423, #FF4E50) ;
+  }
+  
+  h2 {
+    padding-left: 3rem;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #boton {
+    background-color: #030303;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #boton:hover {
+    background-color: #fc0202;
+  }

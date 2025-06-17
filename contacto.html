@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario contacto</title>
+
+     <!-- vinculacion a la hoja de estilo main.css-->
+    <link rel="stylesheet" href="./css/contacto.css"> 
+
+</head>
+<body>
+    <h2>Contáctanos</h2>
+
+    <form onsubmit="mailto:viviana.lopez@istea.com.ar" method="POST" enctype="text/plain">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
+        
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="tumail@mail.com" required>
+        
+        <br>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" rows="10" placeholder="Dejanos tu mensaje y reponderemos tus dudas a la brevedad." required></textarea>
+        
+        <br>
+
+        <input type="submit" value="Enviar" id="boton">
+    </form>
+</body>
+<script src="./scripts/app.js"></script>
+</html>
