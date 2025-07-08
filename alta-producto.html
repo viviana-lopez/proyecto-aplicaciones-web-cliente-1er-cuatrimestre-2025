@@ -26,7 +26,7 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <!-- <section>
         <div> 
             <h1>Administrar productos</h1>
         </div>
@@ -45,12 +45,12 @@
              <br>
 
                 <label for="nombre-producto">Nombre del producto:</label>
-                <input type="text" name="nombre-producto" id="nombre" placeholder="escribe el nombre del producto aqui">
+                <input type="text" name="nombre-producto" id="name" placeholder="escribe el nombre del producto aqui">
                     
                 <br><br>
 
                 <label for="">Categoria del producto</label>
-                <select name="categorias" id="">
+                <select name="categorias" id="categoria">
                     <option value="escalada">escalada</option>
                     <option value="montanismo">montañismo</option>
                     <option value="campamento">campamento</option>
@@ -60,7 +60,7 @@
                 <br><br>
 
                 <label for="">Sub-Categoria del producto</label>
-                <select name="categorias" id="">
+                <select name="categorias" id="subcategoria">
                     <optgroup label="ESCALADA" >
                         <option value="arneses">arneses</option>
                         <option value="cascos">cascos</option>
@@ -101,7 +101,7 @@
 
         <br>
         <br>
-    </section> 
+    </section>  -->
 
     <section>   
         <div>
@@ -118,13 +118,13 @@
 
                     <div>
                         <label for="nombre-producto">Nombre del producto:</label>
-                        <input type="text" name="nombre-producto" id="nombre" placeholder=" Escribe el nombre del producto aqui" size="70" style="height: 40px;">                         
+                        <input type="text" name="nombre-producto" id="name" placeholder=" Escribe el nombre del producto aqui" size="70" style="height: 40px;">                         
                     </div>
                     
                     <br><br>
                     <div>
                         <label for="">Categoria del producto</label>
-                        <select name="categorias" id="">
+                        <select name="category" id="category">
                             <option value="escalada">escalada</option>
                             <option value="montanismo">montañismo</option>
                             <option value="campamento">campamento</option>
@@ -136,7 +136,7 @@
 
                     <div>
                         <label for="">Categoria del producto</label>
-                        <select name="categorias" id="">
+                        <select name="sub-category" id="subcategory">
                             <optgroup label="ESCALADA">
                                 <option value="arneses">arneses</option>
                                 <option value="cascos">cascos</option>
@@ -170,14 +170,21 @@
 
                     <div class="form-product-description">
                         <label for="descripcion-producto">Descripcion</label>
-                    <textarea name="Descripcion" id="descripcion-producto" rows="5" cols="50" placeholder=" Escribe las características principales que definen al producto"></textarea>
+                    <textarea name="descripcion-corta" id="shortdescription" rows="5" cols="50" placeholder=" Escribe las características principales que definen al producto"></textarea>
+                    </div>
+
+                    <br><br>
+
+                    <div class="form-product-description">
+                        <label for="descripcion-producto">Descripcion completa del producto</label>
+                    <textarea name="descripcion-larga" id="longdescription" rows="5" cols="50" placeholder=" Escribe las características principales que definen al producto"></textarea>
                     </div>
 
                     <br><br>
 
                     <div>
-                        <label for="imagenes">Imagenes del producto: </label>
-                        <input type="file" name="" id="imagenes" multiple >
+                        <label for="imagenes">Imagen del producto: </label>
+                        <input type="text" name="imagen-producto" id="image" placeholder=" escrribe aqui la ruta de la imagen" size="70" style="height: 40px;"> 
                     </div>
 
                     <br> <br>
@@ -185,13 +192,13 @@
                     <div>
                         <label for="precio">Precio:</label>
                         <!-- AQUI ES DONDE NO PUEDO AJUSTAR EL ANCHO DEL INPUT-->
-                        <input type="number" id="precio" step="100" value="0"style="width: 60px;" >
+                        <input type="number" id="price" name="precio" step="100" value="0" style="width: 250px; height: 40px;">
                     </div>            
 
                     <br><br>
 
                     <div class="button-submit">
-                        <input class="button" type="submit" value="Agregar producto">
+                        <input class="button" type="submit" name="boton-submit" value="Agregar producto" onclick="event.preventDefault(); addProduct();">
                     </div>
                     
 
@@ -204,4 +211,5 @@
     </section>
     
 </body>
+<script src="./js/edit-product.js"></script>
 </html>
