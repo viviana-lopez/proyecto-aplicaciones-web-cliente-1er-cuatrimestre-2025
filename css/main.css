@@ -168,7 +168,7 @@ header{
 
     .cart{
         margin-left: 1rem;
-        button{
+        a{
             background-color: rgb(38, 38, 38);
             border: none;
             i{

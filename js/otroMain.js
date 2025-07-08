@@ -131,6 +131,8 @@ document.querySelectorAll('[data-filter]').forEach(el => {
     });
 });
 
+
+
 document.getElementById('order-by').addEventListener('change', function () {
    const selectedCategory = this.value;
 

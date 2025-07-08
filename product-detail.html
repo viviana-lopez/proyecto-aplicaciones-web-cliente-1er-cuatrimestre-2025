@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en"> <!---->
+<head>
+    <meta charset="UTF-8"> <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- "viewport" => indica que ajusta lo que va a ver la pantalla al ancho del dispositivo
+         "initial-scale=1.0" => la escala 1:1-->
+    <title>PROYECTO VIVIANA LOPEZ: Catálogo de productos</title><!---->
+
+    <!--para incluir la tipografia roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- vinculacion a la hoja de estilo main.css-->
+    <link rel="stylesheet" href="./css/main.css"> 
+
+    <script src="./js/product-detail.js" defer=""></script>
+  
+    <!--iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <header>
+
+            <img class="logo" src="./carpetaImagenes/LogoBlanco.png" alt="Logo Mountain ">
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#landing" data-filter="">INICIO</a></li>
+                    <li><a href="#productGrid" data-filter=""  >TODOS LOS PRODUCTOS</a></li>
+                    <li><a href="#productGrid" data-filter="escalada">ESCALADA</a>
+                        <ul class="nav-list-sublist">
+                            <li><a href="#productGrid" data-filter="arneses">ARNESES</a></li>
+                            <li><a href="#productGrid" data-filter="cascos" >CASCOS</a></li>
+                            <li><a href="#productGrid" data-filter="cuerdas">CUERDAS Y CORDINES</a></li>
+                            <li><a href="#productGrid" data-filter="mosquetones">MOSQUETONES</a></li>
+                            <li><a href="#productGrid" data-filter="calzado">ZAPATILLAS</a></li>
+                            <li><a href="#productGrid" data-filter="accesorios">ACCESORIOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#productos" data-filter="montanismo">MONTAÑISMO</a>
+                        <ul class="nav-list-sublist">
+                            <li><a href="#productos" data-filer="mochilas">MOCHILAS</a></li>
+                            <li><a href="#productos" data-filter="calzado">CALZADO</a></li>
+                            <li><a href="#productos" data-filter="material">MATERIAL</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#productos" data-filter="campamento">CAMPAMENTO</a>
+                        <ul class="nav-list-sublist">
+                            <li><a href="#productos" data-filter="carpas">CARPAS</a></li>
+                            <li><a href="#productos" data-filter="bolsas">BOLSAS DE DORMIR</a></li>
+                            <li><a href="#productos" data-filter="aislantes">AISLANTES</a></li>
+                            <li><a href="#productos" data-filter="calentadores">CALENTADORES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#productos" data-filter="indumentaria">INDUMENTARIA</a>
+                        <ul class="nav-list-sublist">
+                            <li><a href="#productos" data-filter="prendas">PRENDAS</a></li>
+                            <li><a href="#productos" data-filter="interiores">INTERIORES</a></li>
+                            <li><a href="#productos" data-filter="calzado">CALZADO</a></li>
+                            <li><a href="#productos" data-filter="accesorios">ACCESORIOS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="derecha-nav">
+                <!--BUSCADOR DE PRODUCTOS-->
+                <div class="serchbar">
+                    <div>
+                        <input type="text" id="input-search-products" placeholder="Buscar producto"> <i class="bi bi-search"></i>
+                    </div>    
+                </div>
+
+                <div class="menu-icon"><button><i class="bi bi-list"></i></button></div>
+                <div class="cart">
+                    <a href="/cart.html"><i class="bi bi-bag"></i></a>
+                </div>
+                <!--agregar carrito de compras-->
+          
+            </div>
+                    
+    </header> 
+<br><br><br><br><br><br><br><br><br><br>
+    <section class="selected-product">
+        <div class="product-description">
+            <div class="product-description-container">
+                <div class="description-image">
+                    <img id="prod-img" src="" alt="imaginate que soy una imagen">
+                </div>
+                <div class="description-information">
+                    <h3 id="prod-title">Título</h3>
+                    <p id="prod-short-desc">Descripcion corta</p>
+                    <p id="prod-price">precio $$$$00000</p>
+                    <button id="btn-add-cart">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="product-description-long-description">
+                <p id="prod-long-desc">descripcion susper super largaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaa</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-newsletter">
+            
+            <br>
+            <h4>SUSCRIBITE AL NEWSLETTER</h4>
+            <br>
+            <P>Recibí las últimas novedades y promociones en tu email !</P>
+            <br>
+            <form class="newsletter" action="" method="post" >
+                <input type="email" class="input-mail" id="input-mail" name="input-mail" placeholder="E-Mail" required="required">
+                <br><br>
+                <input type="text" class="input-nombre" id="input-nombre" name="input-nombre" placeholder="Nombre">
+                <br><br>
+                <input type="submit" class="input-submit" value="SUSCRIBIRME">
+            </form>
+            <br>
+        </div>
+
+        <div class="footer-quienes-somos">
+            <h4>QUIENES SOMOS</h4>
+            <br><br>
+            <p>Tienda especializada en equipo de escalada y montaña. Las mejores marcas, Ansilta, La Sportiva, Petzl, Edelrid, Edelweiss, Patagonia, Nature Hike Epic, Lowe Alpine, Altus y muchas más.</p>
+            
+            <br>
+            <div>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-contacto">
+            <h4>DATOS DE CONTACTO</h4>
+            <br><br>
+            <p><i class="bi bi-map-fill"></i> Av. Bonita 1111, 111, Nuñez, C.A.B.A, Buenos Aires, Argentina</p>
+            <br>
+            <p><i class="bi bi-clock"></i> Lun. de 15 a 19hs / Mar-Sáb. de 9 a 19hs</p>
+            <br>
+            <p><i class="bi bi-whatsapp"></i> (011) 1111 1111</p>
+            <br>
+            <p><i class="bi bi-envelope"></i> info@mail.com</p>
+            <br>
+            <p></p>
+            <p>Tenés alguna duda o consulta?     .      <i class="bi bi-wechat"></i> <a href="contacto.html">CONTACTANOS</a></p>
+        </div>
+   </footer>
+
+    
+</body>
+
+</html>
